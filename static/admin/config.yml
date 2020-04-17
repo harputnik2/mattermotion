@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: harputnik2/mattermotion
   branch: master
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
