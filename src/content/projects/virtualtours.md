@@ -2,5 +2,5 @@
 templateKey: virtualtours
 path: /projects/virtualtours
 title: sample title
-content: sample content
+content: sample virtualtours content
 ---
