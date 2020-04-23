@@ -2,20 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const VisualisationsPageTemplate = ({
-  visualisations,
+  content,
 }) => (
   <div className="content">
-    {visualisations.map(item => (
-      <p>{item.text}</p>
-    ))}
+    {content}
   </div>
 )
 
 VisualisationsPageTemplate.propTypes = {
-  visualisations: PropTypes.array,
+  content: PropTypes.string,
 }
 
 const VisualisationsPage = ({ data }) => {
@@ -24,7 +21,7 @@ const VisualisationsPage = ({ data }) => {
   return (
     <Layout>
       <VisualisationsPageTemplate
-        visualisations={frontmatter.visualisations}
+        content = {frontmatter.content}
       />
     </Layout>
   )
@@ -43,15 +40,8 @@ export default VisualisationsPage
 export const visualisationsPageQuery = graphql`
   query VisualisationsPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      visualisations {
-        image {
-          childImageSharp {
-            fluid(maxWidth: 240, quality: 64) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        text
+      frontmatter {
+        content
       }
     }
   }
