@@ -1,6 +1,6 @@
 ---
-templateKey: animations
 path: /projects/animations
+templateKey: animations
 title: sample title
-content: sample content
+content: sample content - test
 ---
