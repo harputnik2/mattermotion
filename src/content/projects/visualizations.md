@@ -1,6 +1,6 @@
 ---
 title: visualizations page.
-content: sample visualizations content
+content: sample visualizations content.
 visualization:
   - image: /img/blog-index.jpg
     description: babababa.
