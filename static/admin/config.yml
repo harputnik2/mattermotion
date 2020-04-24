@@ -20,6 +20,7 @@ collections:
         label: "home page"
         name: "home"
         fields:
+          - {label: "Path", name: "path", widget: string, default: "/"}
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "string"}
@@ -27,6 +28,7 @@ collections:
         label: "pricing page"
         name: "pricing"
         fields:
+          - {label: "Path", name: "path", widget: string, default: "/pricing"}
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "pricing"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "string"}
@@ -37,6 +39,7 @@ collections:
         label: "virtual tours"
         name: "virtualtours"
         fields:
+          - {label: "Path", name: "path", widget: string, default: "/projects/virtualtours"}
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "virtualtours"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "string"}
@@ -44,6 +47,7 @@ collections:
         label: "animations"
         name: "animations"
         fields:
+          - {label: "Path", name: "path", widget: string, default: "/projects/animations"}
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "animations"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "string"}
@@ -51,6 +55,7 @@ collections:
         label: "visualizations"
         name: "visualizations"
         fields:
+          - {label: "Path", name: "path", widget: string, default: "/projects/visualizations"}
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "visualizations"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "string"}
