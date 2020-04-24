@@ -1,4 +1,5 @@
 ---
+path: /projects/visualizations
 title: visualizations page.
 content: sample visualizations content.
 visualization:
