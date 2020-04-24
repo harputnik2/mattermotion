@@ -1,5 +1,6 @@
 ---
 path: /projects/visualizations
+templateKey: visualizations
 title: visualizations page.
 content: sample visualizations content.
 visualization:

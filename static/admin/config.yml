@@ -47,10 +47,14 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "animations"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "string"}
-      - file: "src/content/projects/visualisations.md"
-        label: "visualisations"
-        name: "visualisations"
+      - file: "src/content/projects/visualizations.md"
+        label: "visualizations"
+        name: "visualizations"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "visualisations"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "visualizations"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "string"}
+          - {label: "Visualization", name: "visualization", widget: list, fields: [
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Description", name: "description", widget: "text"}
+            ]}

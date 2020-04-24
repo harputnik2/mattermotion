@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
-export const VisualisationsPageTemplate = ({
+export const visualizationsPageTemplate = ({
   content,
 }) => (
   <div className="content">
@@ -11,23 +11,23 @@ export const VisualisationsPageTemplate = ({
   </div>
 )
 
-VisualisationsPageTemplate.propTypes = {
+visualizationsPageTemplate.propTypes = {
   content: PropTypes.string,
 }
 
-const VisualisationsPage = ({ data }) => {
+const visualizationsPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
-      <VisualisationsPageTemplate
+      <visualizationsPageTemplate
         content = {frontmatter.content}
       />
     </Layout>
   )
 }
 
-VisualisationsPage.propTypes = {
+visualizationsPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -35,10 +35,10 @@ VisualisationsPage.propTypes = {
   }),
 }
 
-export default VisualisationsPage
+export default visualizationsPage
 
-export const visualisationsPageQuery = graphql`
-  query VisualisationsPage($id: String!) {
+export const visualizationsPageQuery = graphql`
+  query visualizationsPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         content
