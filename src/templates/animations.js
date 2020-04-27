@@ -2,17 +2,31 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Video from '../components/Video'
 
 export const AnimationsPageTemplate = ({
   content,
+  animation
 }) => (
-  <div className="content">
-    {content}
+  <div>
+    <div className="content">
+      {content}
+    </div>
+
+    {animation.map((item, index) => (
+      <div key={item.index}>
+        <Video
+          videoSrcURL={item.video.publicURL}
+          videoTitle={item.video.description}
+        />
+      </div>
+    ))}
   </div>
 )
 
 AnimationsPageTemplate.propTypes = {
   content: PropTypes.string,
+  animation: PropTypes.array,
 }
 
 const AnimationsPage = ({ data }) => {
@@ -22,6 +36,7 @@ const AnimationsPage = ({ data }) => {
     <Layout>
       <AnimationsPageTemplate
         content = {frontmatter.content}
+        animation = {frontmatter.animation}
       />
     </Layout>
   )
@@ -42,6 +57,12 @@ export const AnimationsPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         content
+        animation {
+          video {
+            publicURL
+          }
+          description
+        }
       }
     }
   }

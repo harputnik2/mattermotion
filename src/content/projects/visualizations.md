@@ -4,8 +4,8 @@ templateKey: visualizations
 title: visualizations page.
 content: sample visualizations content- test
 visualization:
-  - image: /img/blog-index.jpg
+  - image: /media/blog-index.jpg
     description: babababa.
-  - image: /img/chemex.jpg
+  - image: /media/chemex.jpg
     description: bebebebebebebe.
 ---

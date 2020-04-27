@@ -4,6 +4,6 @@ templateKey: animations
 title: sample title
 content: sample content - test
 animation:
-  - video: /img/animacja.mp4
+  - video: /media/animacja.mp4
     description: bababaraba.
 ---
