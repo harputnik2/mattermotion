@@ -1,13 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import Layout from './components/Layout'
+import {Hero} from './home/hero'
+import {About} from './home/about'
 
 export const HomePageTemplate = ({
   content,
 }) => (
   <div className="content">
-    {content}
+    <Hero />
+    <About content={content} />
   </div>
 )
 

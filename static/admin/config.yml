@@ -13,6 +13,19 @@ media_folder: static/media
 public_folder: /img
 
 collections:
+  - name: visualisations
+    label: Visualisations
+    folder: visualisations
+    create: true
+    fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "visualisation" }
+      - { name: path, label: Path }
+      - { name: year, label: Year, widget: string }
+      - { name: title, label: Title }
+      - { name: description, label: Description, widget: string }
+      - {label: "Visualizations", name: "visualizations", widget: list, fields: [
+          {label: "Image", name: "image", widget: "image"},
+        ]}
   - name: "pages"
     label: "pages"
     files:

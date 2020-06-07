@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Video from '../components/Video'
+import Layout from './components/Layout'
+import Video from './components/Video'
 
 export const AnimationsPageTemplate = ({
   content,
