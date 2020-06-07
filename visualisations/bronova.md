@@ -1,0 +1,10 @@
+---
+templateKey: visualisation
+path: /visualisations/bronova
+year: "2019"
+title: Bronova
+description: this is a description of the project
+visualizations:
+  - image: /img/bronova1.jpg
+  - image: /img/bronova2.jpg
+---
