@@ -13,12 +13,12 @@ media_folder: static/media
 public_folder: /img
 
 collections:
-  - name: visualisations
-    label: Visualisations
-    folder: visualisations
+  - name: visualizations
+    label: Visualizations
+    folder: "src/content/visualizations"
     create: true
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "visualisation" }
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "visualization" }
       - { name: path, label: Path }
       - { name: year, label: Year, widget: string }
       - { name: title, label: Title }

@@ -1,6 +1,6 @@
 ---
-templateKey: visualisation
-path: /visualisations/onedesk
+templateKey: visualization
+path: /visualizations/onedesk
 year: "2018"
 title: OneDesk
 description: not a great description, but not terrible
