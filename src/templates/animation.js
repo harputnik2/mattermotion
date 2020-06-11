@@ -4,37 +4,35 @@ import { graphql } from 'gatsby'
 import Layout from './components/Layout'
 import Features from './components/Features'
 
-export const VisualizationPageTemplate = ({
-  description,
-  visualizations
+export const AnimationPageTemplate = ({
+  description
 }) => (
   <div>
     <div className="content">
       {description}
     </div>
-    <Features gridItems={visualizations} />
   </div>
 )
 
-VisualizationPageTemplate.propTypes = {
+AnimationPageTemplate.propTypes = {
   description: PropTypes.string,
-  visualizations: PropTypes.array,
+  animations: PropTypes.array,
 }
 
-const VisualizationPage = ({ data }) => {
+const AnimationPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
-      <VisualizationPageTemplate
+      <AnimationPageTemplate
         description = {frontmatter.description}
-        visualizations = {frontmatter.visualizations}
+        animations = {frontmatter.animations}
       />
     </Layout>
   )
 }
 
-VisualizationPage.propTypes = {
+AnimationPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -42,24 +40,15 @@ VisualizationPage.propTypes = {
   }),
 }
 
-export default VisualizationPage
+export default AnimationPage
 
-export const VisualizationPageQuery = graphql`
-  query VisualizationPage($id: String!) {
+export const AnimationPageQuery = graphql`
+  query AnimationPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         year
         title
         description
-        visualizations {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 240, quality: 64) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
       }
     }
   }

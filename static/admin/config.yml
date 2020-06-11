@@ -18,65 +18,83 @@ collections:
     folder: "src/content/visualizations"
     create: true
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "visualization" }
-      - { name: path, label: Path }
-      - { name: year, label: Year, widget: string }
-      - { name: title, label: Title }
-      - { name: description, label: Description, widget: string }
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "visualization"}
+      - {name: path, label: Path, widget: string, hint: "template path: /virtualtours/visualization_name"}
+      - {name: year, label: Year, widget: string}
+      - {name: title, label: Title}
+      - {name: description, label: Description, widget: string}
+      - {name: minature, label: "Artwork Minature", widget: "image"}
       - {label: "Visualizations", name: "visualizations", widget: list, fields: [
-          {label: "Image", name: "image", widget: "image"},
-        ]}
-  - name: "pages"
-    label: "pages"
+        {label: "Image", name: "image", widget: "image"}
+      ]}
+  - name: animations
+    label: Animations
+    folder: "src/content/animations"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "animation"}
+      - {name: path, label: Path, widget: string, hint: "template path: /animations/animation_name"}
+      - {name: year, label: Year, widget: string}
+      - {name: title, label: Title}
+      - {name: description, label: Description, widget: string}
+      - {name: minature, label: "Artwork Minature", widget: "image"}
+      - {label: "Animation", name: "animation", widget: file}
+  - name: virtualtours
+    label: "Virtual Tours"
+    folder: "src/content/virtualtours"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "virtualtour"}
+      - {name: path, label: Path, widget: string, hint: "template path: /virtualtours/virtualtour_name"}
+      - {name: year, label: Year, widget: string}
+      - {name: title, label: Title}
+      - {name: description, label: Description, widget: string}
+      - {name: minature, label: "Artwork Minature", widget: "image"}
+      - {name: "virtualtour", label: "Virtual Tour Path", widget: string}
+  - name: "homepage"
+    label: "Home Page"
     files:
       - file: "src/content/home.md"
-        label: "home page"
+        label: "Home Page"
         name: "home"
         fields:
           - {label: "Path", name: "path", widget: string, default: "/"}
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "string"}
+          - {label: "Hero", name: "hero", widget: "object", collapsed: true, fields: [
+            {label: "Main Headline", name: "mainHeadline", widget: "string"},
+            {label: "Motto", name: "motto", widget: "string"}
+          ]}
+          - {label: "About", name: "about", widget: "object", collapsed: true, fields: [
+            {label: "Title", name: "title", widget: "string"},
+            {label: "Content", name: "content", widget: "markdown"}
+          ]}
+          - {label: "What We Do", name: "whatwedo", widget: "object", collapsed: true, fields: [
+            {label: "Animations", name: "animations", widget: "object", collapsed: false, fields: [
+              {label: "Sample Animation", name: "sample", widget: "file"},
+              {label: "Teaser", name: "teaser", widget: "string"}
+            ]},
+            {label: "Virtual Tours", name: "virtualtours", widget: "object", collapsed: false, fields: [
+              {label: "Sample Virtual Tour", name: "sample", widget: "file"},
+              {label: "Teaser", name: "teaser", widget: "string"}
+            ]},
+            {label: "Visualizations", name: "visualizations", widget: "object", collapsed: false, fields: [
+              {label: "Sample Visualizations", name: "sample", widget: "file"},
+              {label: "Teaser", name: "teaser", widget: "string"}
+            ]}
+          ]}
+          - {label: "What others say", name: "whatotherssay", widget: "list", collapsed: true, fields: [
+            {label: "Logo", name: "logo", widget: "image"},
+            {label: "Content", name: "content", widget: "string"},
+            {label: "Author", name: "author", widget: "string"}
+          ]}
+  - name: "pricingpage"
+    label: "Pricing Page"
+    files:
       - file: "src/content/pricing.md"
-        label: "pricing page"
+        label: "Pricing Page"
         name: "pricing"
         fields:
           - {label: "Path", name: "path", widget: string, default: "/pricing"}
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "pricing"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Content", name: "content", widget: "string"}
-  - name: "projects"
-    label: "projects"
-    files:
-      - file: "src/content/projects/virtualtours.md"
-        label: "virtual tours"
-        name: "virtualtours"
-        fields:
-          - {label: "Path", name: "path", widget: string, default: "/projects/virtualtours"}
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "virtualtours"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "string"}
-      - file: "src/content/projects/animations.md"
-        label: "animations"
-        name: "animations"
-        fields:
-          - {label: "Path", name: "path", widget: string, default: "/projects/animations"}
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "animations"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "string"}
-          - {label: "Animation", name: "animation", widget: list, fields: [
-              {label: "Video", name: "video", widget: "file"},
-              {label: "Description", name: "description", widget: "text"}
-            ]}
-      - file: "src/content/projects/visualizations.md"
-        label: "visualizations"
-        name: "visualizations"
-        fields:
-          - {label: "Path", name: "path", widget: string, default: "/projects/visualizations"}
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "visualizations"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "content", widget: "string"}
-          - {label: "Visualization", name: "visualization", widget: list, fields: [
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Description", name: "description", widget: "text"}
-            ]}

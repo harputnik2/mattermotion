@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
-import Layout from './components/Layout'
-import Features from './components/Features'
+import Layout from '../templates/components/Layout'
+import Features from '../templates/components/Features'
 
 
 const PostLink = ({ post }) => (
@@ -13,34 +13,35 @@ const PostLink = ({ post }) => (
   </div>
 )
 
-const AnimationsPageTemplate = ({
+const VisualizationsPageTemplate = ({
   edges
 }) => {
-  const Posts = edges
+  console.log(edges)
+  const Posts = edges.edges
     .filter(edge => !!edge.node.frontmatter.year) // You can filter your posts based on some criteria
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
   return <div>{Posts}</div>
 }
 
-AnimationsPageTemplate.propTypes = {
+VisualizationsPageTemplate.propTypes = {
   path: PropTypes.string,
   year: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
-  animation: PropTypes.array,
+  visualization: PropTypes.array,
 }
 
-const AnimationsPage = ({ data }) => {
+const VisualizationsPage = ({ data }) => {
 
   const edges = data.allMarkdownRemark;
   return (
     <Layout>
-      <AnimationsPageTemplate edges={edges} />
+      <VisualizationsPageTemplate edges={edges} />
     </Layout>
   )
 }
 
-AnimationsPage.propTypes = {
+VisualizationsPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -48,9 +49,9 @@ AnimationsPage.propTypes = {
   }),
 }
 
-export default AnimationsPage
+export default VisualizationsPage
 
-export const AnimationsPageQuery = graphql`
+export const VisualizationsPageQuery = graphql`
   query {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___year] }) {
       edges {
