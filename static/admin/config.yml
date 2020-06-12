@@ -82,7 +82,7 @@ collections:
               {label: "Teaser", name: "teaser", widget: "string"}
             ]}
           ]}
-          - {label: "What others say", name: "whatotherssay", widget: "list", collapsed: true, fields: [
+          - {label: "What others say", name: "whatotherssay", collapsed: false, widget: "list", fields: [
             {label: "Logo", name: "logo", widget: "image"},
             {label: "Content", name: "content", widget: "string"},
             {label: "Author", name: "author", widget: "string"}
