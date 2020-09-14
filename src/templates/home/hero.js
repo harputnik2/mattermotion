@@ -1,35 +1,31 @@
-import React from 'react'
+import React from 'react';
+import heroVideo from './hero_video.mp4'
 
 export const Hero = () => {
 
   return (
     <section className="hero-section">
-      <div className="container">
-        <div className="columns">
-          <div className="column">a</div>
-          <div className="column">a</div>
-          <div className="column">a</div>
-          <div className="column">
-            <span className="arrow-down"></span>
-          </div>
-
-        </div>
-        <div className="hero-bg">
-          // background video
-        </div>
-        <div className="hero-content">
-          <h1>We are Matter Motion</h1>
-          <p>
-            Show the full awesomeness of your architectural projects with help
-            of my skills in animations, virtual tours and visualisations.
-          </p>
-          <div className="hero-buttons">
-            <button className="button">
-              see what we do
-            </button>
-            <button className="button">
-              let's work together
-            </button>
+      <div className="hero-bg">
+        <video muted={true} autoPlay={true} loop>
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+      </div>
+      <div className="hero-content">
+        <div className="container">
+          <div className="hero-content">
+            <h1>This is Matter Motion</h1>
+            <div className="hero-buttons">
+              <button className="button">
+                <span>
+                  see what we do
+                </span>
+              </button>
+              <button className="button button-framed">
+                <span>
+                  let's work together
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

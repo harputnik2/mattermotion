@@ -54,7 +54,7 @@ export const VisualizationPageQuery = graphql`
         visualizations {
           image {
             childImageSharp {
-              fluid(maxWidth: 240, quality: 64) {
+              fluid(maxWidth: 400, maxHeight: 250) {
                 ...GatsbyImageSharpFluid
               }
             }

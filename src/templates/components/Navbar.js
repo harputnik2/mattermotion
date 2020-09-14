@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../../img/github-icon.svg'
-import logo from '../../img/logo.svg'
+import logo from '../../img/logo_icon.svg'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -12,7 +11,7 @@ const Navbar = class extends React.Component {
     }
   }
 
-  toggleHamburger = () => {
+  toggleMenu = () => {
     // toggle the active boolean in the state
     this.setState(
       {
@@ -34,54 +33,52 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
+      <div className="nav-holder">
         <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Matter Motion" style={{ width: '88px' }} />
+          <nav className="main-nav navbar navbar-expand-lg" role="navigation" aria-label="main-navigation">
+            <Link to="/" className="navbar-brand" title="Logo">
+              <img src={logo} className="logo" alt="Matter Motion" />
             </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="">Menu</span>
+            </button>
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <Link className="navbar-item" to="/">
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="navbar-item" to="/projects/virtualtours">
+                    Virtual Tours
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="navbar-item" to="/projects/animations">
+                    Animations
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="navbar-item" to="/projects/visualizations">
+                    Visualizations
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="navbar-item" to="/pricing">
+                    Pricing
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="navbar-item" to="/contact">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
             </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/">
-                Home
-              </Link>
-              <Link className="navbar-item" to="/projects/virtualtours">
-                Virtual Tours
-              </Link>
-              <Link className="navbar-item" to="/projects/animations">
-                Animations
-              </Link>
-              <Link className="navbar-item" to="/projects/visualizations">
-                Visualizations
-              </Link>
-              <Link className="navbar-item" to="/pricing">
-                Pricing
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-            </div>
-          </div>
+          </nav>
         </div>
-      </nav>
+      </div>
     )
   }
 }

@@ -1,0 +1,89 @@
+.nav-holder {
+  background-color: $white;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+  @include media-breakpoint-up(lg) {
+    height: 100px;
+  }
+  @include media-breakpoint-up(xxl) {
+    height: 130px;
+  }
+  @include media-breakpoint-up(xxxl) {
+    height: 170px;
+  }
+}
+
+.main-nav {
+  .logo {
+    height: 32px;
+    max-width: none;
+    max-width: none;
+    @include media-breakpoint-up(lg) {
+      height: 52px;
+    }
+    @include media-breakpoint-up(xxl) {
+      height: 66px;
+    }
+    @include media-breakpoint-up(xxxl) {
+      height: 88px;
+    }
+  }
+  .navbar-item {
+    color: $black;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 40px;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: -6px;
+      left: 0;
+      height: 1px;
+      width: 20%;
+      background-color: transparent;
+      transition: all 0.5s;
+    }
+    &:hover {
+      text-decoration: none;
+      &:after {
+        width: 100%;
+        background-color: $black;
+      }
+    }
+  }
+}
+
+
+.homepage {
+  .nav-holder {
+    background-color: transparent;
+    border-bottom: 1px solid $black;
+    margin-bottom: -80px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: -100px;
+    }
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: -130px;
+    }
+    @include media-breakpoint-up(xxxl) {
+      margin-bottom: -170px;
+    }
+    .navbar-item {
+      color: $white;
+      &:hover {
+        &:after {
+          background-color: $white;
+        }
+      }
+    }
+    .logo {
+      filter: invert(1);
+    }
+  }
+}

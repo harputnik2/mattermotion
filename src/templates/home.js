@@ -1,30 +1,44 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from './components/Layout'
 import {Hero} from './home/hero'
 import {About} from './home/about'
+import {WhatWeDo} from './home/whatwedo'
+import {Contact} from './home/contact'
+import {Testimonials} from './home/testimonials'
 
 export const HomePageTemplate = ({
-  content,
+  about
 }) => (
   <div className="content">
+    <Helmet>
+      <html lang="en" className="homepage" />
+    </Helmet>
     <Hero />
-    <About content={content} />
+    <About content={about.content} />
+    <WhatWeDo content={"asdf"} />
+    <Contact content={"fdgdh"} />
+    <Testimonials content={"weteryre"} />
   </div>
 )
 
 HomePageTemplate.propTypes = {
-  content: PropTypes.string,
+  about: PropTypes.object,
 }
 
 const HomePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
+  console.log("====================================");
+  console.log(frontmatter);
+  console.log("====================================");
+
   return (
     <Layout>
       <HomePageTemplate
-        content = {frontmatter.content}
+        about = {frontmatter.about}
       />
     </Layout>
   )
@@ -44,8 +58,47 @@ export const HomePageQuery = graphql`
   query HomePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        content
+        about {
+          content
+          title
+        }
       }
     }
   }
 `
+
+// export const HomePageQuery = graphql`
+//   query HomePage($id: String!) {
+//     markdownRemark(id: { eq: $id }) {
+//       frontmatter {
+//         about {
+//           content
+//           title
+//         }
+//         hero {
+//           mainHeadline
+//           motto
+//         }
+//         whatwedo {
+//           animations {
+//             sample
+//             teaser
+//           }
+//           virtualtours {
+//             sample
+//             teaser
+//           }
+//           visualizations {
+//             sample
+//             teaser
+//           }
+//         }
+//         whatotherssay {
+//           author
+//           content
+//           logo
+//         }
+//       }
+//     }
+//   }
+// `
