@@ -15,18 +15,19 @@ about:
 
 
     My skills are perfect for you if you value your work, want to create an engaging image of your architectural designs and strive to encourage clients to your project.
-whatwedo:
+categories:
   animations:
-    teaser: Motion is a thing! Add animations to your architectural designs and
-      engage your clients.
-    sample: /img/sample_mini.mp4
+    minature: /img/spacex.png
+    teaser: blabla
   virtualtours:
-    sample: /img/sample_mini.mp4
-    teaser: Feel the space around you. Virtual Tour is the most immersive experience
-      you can give to your clients.
+    minature: /img/spacex.png
+    teaser: blablablabla
   visualizations:
-    sample: /img/viz_mini.mp4
-    teaser: Photoreality is just the beginning.
+    minature:
+      image1: /img/spacex.png
+      image2: /img/spacex.png
+      image3: /img/spacex.png
+    teaser: blaaablaaablaaaablaaaaaaaaa
 whatotherssay:
   - logo: /img/spacex.png
     content: great job. great guy.

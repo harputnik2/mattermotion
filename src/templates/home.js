@@ -18,7 +18,7 @@ export const HomePageTemplate = ({
     </Helmet>
     <Hero />
     <About content={about.content} />
-    <WhatWeDo content={"asdf"} />
+    <WhatWeDo content={"dsfdsfsdfds"} />
     <Contact content={"fdgdh"} />
     <Testimonials content={"weteryre"} />
   </div>
@@ -30,10 +30,6 @@ HomePageTemplate.propTypes = {
 
 const HomePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
-  console.log("====================================");
-  console.log(frontmatter);
-  console.log("====================================");
 
   return (
     <Layout>

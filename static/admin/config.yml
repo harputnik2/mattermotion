@@ -19,7 +19,7 @@ collections:
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "visualization"}
-      - {name: path, label: Path, widget: string, hint: "template path: /virtualtours/visualization_name"}
+      - {name: path, label: Path, widget: string, hint: "template path: /visualizations/visualization_name"}
       - {name: year, label: Year, widget: string}
       - {name: title, label: Title}
       - {name: description, label: Description, widget: string}
@@ -68,19 +68,23 @@ collections:
             {label: "Title", name: "title", widget: "string"},
             {label: "Content", name: "content", widget: "markdown"}
           ]}
-          - {label: "What We Do", name: "whatwedo", widget: "object", collapsed: true, fields: [
-            {label: "Animations", name: "animations", widget: "object", collapsed: false, fields: [
-              {label: "Sample Animation", name: "sample", widget: "file"},
+          - {label: "What We Do", name: "categories", widget: "object", collapsed: true, fields: [
+            {label: "Animations", name: "animations", widget: "object", fields: [
+              {label: "Animation Minature", name: "minature", widget: "image"},
               {label: "Teaser", name: "teaser", widget: "string"}
             ]},
-            {label: "Virtual Tours", name: "virtualtours", widget: "object", collapsed: false, fields: [
-              {label: "Sample Virtual Tour", name: "sample", widget: "file"},
+            {label: "Virtual Tours", name: "virtualtours", widget: "object", fields: [
+              {label: "Virtual Tour Minature", name: "minature", widget: "image"},
               {label: "Teaser", name: "teaser", widget: "string"}
             ]},
             {label: "Visualizations", name: "visualizations", widget: "object", collapsed: false, fields: [
-              {label: "Sample Visualizations", name: "sample", widget: "file"},
+              {label: "Visualizations Minature", name: "minature", widget: "object", fields: [
+                {label: "Image 1", name: "image1", widget: "image"},
+                {label: "Image 2", name: "image2", widget: "image"},
+                {label: "Image 3", name: "image3", widget: "image"}
+              ]},
               {label: "Teaser", name: "teaser", widget: "string"}
-            ]}
+            ]},
           ]}
           - {label: "What others say", name: "whatotherssay", collapsed: false, widget: "list", fields: [
             {label: "Logo", name: "logo", widget: "image"},
