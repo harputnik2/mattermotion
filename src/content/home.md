@@ -6,7 +6,7 @@ content: sample content
 hero:
   mainHeadline: We are Matter Motion
   motto: Show the full awesomeness of your architectural projects with help of my
-    skills in animations, virtual tours and visualizations.
+    skills in animations, virtual tours and visualizations. small change
 about:
   title: About Matter Motion
   content: >-
