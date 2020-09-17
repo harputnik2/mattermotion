@@ -1,19 +1,53 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
-export const WhatWeDo = ({content}) => {
-  console.log(content);
+export const WhatWeDo = ({categories}) => {
+  console.log(categories);
   return (
-    <section className="mm-section about-section">
+    <section className="mm-section whatwedo-section">
       <div className="container">
         <div className="about-content">
           <h2 className="caption">What We Do</h2>
           <div className="category-link">
             <div className="category-link-elements">
               <div className="graphic">
-              
+                <Img fluid={categories.animations.minature.childImageSharp.fluid} />
               </div>
-              <div className="title"></div>
-              <div className="description"></div>
+              <div className="title">
+                <h2>Animations</h2>
+                <figure class="category-arrow"></figure>
+              </div>
+              <div className="description">
+                <p>{categories.animations.teaser}</p>
+              </div>
+            </div>
+          </div>
+          <div className="category-link">
+            <div className="category-link-elements">
+              <div className="graphic">
+                <Img fluid={categories.animations.minature.childImageSharp.fluid} />
+              </div>
+              <div className="title">
+                <h2>Animations</h2>
+                <figure class="category-arrow"></figure>
+              </div>
+              <div className="description">
+                <p>{categories.animations.teaser}</p>
+              </div>
+            </div>
+          </div>
+          <div className="category-link">
+            <div className="category-link-elements">
+              <div className="graphic">
+                <Img fluid={categories.animations.minature.childImageSharp.fluid} />
+              </div>
+              <div className="title">
+                <h2>Animations</h2>
+                <figure class="category-arrow"></figure>
+              </div>
+              <div className="description">
+                <p>{categories.animations.teaser}</p>
+              </div>
             </div>
           </div>
         </div>

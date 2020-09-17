@@ -10,7 +10,8 @@ import {Contact} from './home/contact'
 import {Testimonials} from './home/testimonials'
 
 export const HomePageTemplate = ({
-  about
+  about,
+  categories,
 }) => (
   <div className="content">
     <Helmet>
@@ -18,7 +19,7 @@ export const HomePageTemplate = ({
     </Helmet>
     <Hero />
     <About content={about.content} />
-    <WhatWeDo content={"dsfdsfsdfds"} />
+    <WhatWeDo categories={categories} />
     <Contact content={"fdgdh"} />
     <Testimonials content={"weteryre"} />
   </div>
@@ -26,6 +27,7 @@ export const HomePageTemplate = ({
 
 HomePageTemplate.propTypes = {
   about: PropTypes.object,
+  categories: PropTypes.object,
 }
 
 const HomePage = ({ data }) => {
@@ -35,6 +37,7 @@ const HomePage = ({ data }) => {
     <Layout>
       <HomePageTemplate
         about = {frontmatter.about}
+        categories = {frontmatter.categories}
       />
     </Layout>
   )
@@ -58,43 +61,19 @@ export const HomePageQuery = graphql`
           content
           title
         }
+        categories {
+          animations {
+            teaser
+            minature {
+              childImageSharp {
+                fluid(maxWidth: 400, maxHeight: 250) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
 `
-
-// export const HomePageQuery = graphql`
-//   query HomePage($id: String!) {
-//     markdownRemark(id: { eq: $id }) {
-//       frontmatter {
-//         about {
-//           content
-//           title
-//         }
-//         hero {
-//           mainHeadline
-//           motto
-//         }
-//         whatwedo {
-//           animations {
-//             sample
-//             teaser
-//           }
-//           virtualtours {
-//             sample
-//             teaser
-//           }
-//           visualizations {
-//             sample
-//             teaser
-//           }
-//         }
-//         whatotherssay {
-//           author
-//           content
-//           logo
-//         }
-//       }
-//     }
-//   }
-// `

@@ -29,3 +29,48 @@
     }
   }
 }
+
+.category-link {
+  margin: $spacing-xxl 0;
+  &-elements {
+    position: relative;
+    width: 60%;
+    display: inline-block;
+    text-align: left;
+    .graphic {
+      border: 1px solid $black;
+    }
+    .title {
+      position: absolute;
+      right: -$spacing-m;
+      top: $spacing-m;
+      padding: $spacing-m $spacing-m 4*$spacing-m;
+      background-color: $black;
+      h2 {
+        color: $concrete;
+        font-weight: 100;
+      }
+      .category-arrow {
+
+      }
+    }
+    .description {
+      position: absolute;
+      left: -$spacing-m;
+      bottom: -$spacing-m;
+      padding: $spacing-m;
+      border: 1px solid $black;
+      background-color: $white;
+      width: 40%;
+    }
+  }
+  &:nth-of-type(1) {
+    text-align: right;
+  }
+  &:nth-of-type(2) {
+    text-align: center;
+  }
+  &:nth-of-type(3) {
+    text-align: left;
+  }
+}

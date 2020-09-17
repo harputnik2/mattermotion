@@ -46,7 +46,7 @@
   padding: $spacing-xl 0;
   position: relative;
   &:before, &:after {
-    z-index: 5;
+    z-index: -1;
     content: '';
     display: block;
     background-color: $black;
@@ -66,19 +66,5 @@
   .section-content {
     position: relative;
     z-index: 10;
-  }
-}
-
-.category-link {
-  .category-link-elements {
-    .graphic {
-
-    }
-    .title {
-
-    }
-    .description {
-
-    }
   }
 }

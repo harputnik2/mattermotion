@@ -3,7 +3,7 @@ import React from 'react'
 export const Testimonials = ({content}) => {
 
   return (
-    <section className="mm-section about-section">
+    <section className="mm-section testimonials-section">
       <div className="container">
         <div className="section-content">
           <h2 className="caption">What Others Say About Us</h2>
