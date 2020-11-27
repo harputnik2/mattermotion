@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { Menu } from './Menu'
 import logo from '../../img/logo_icon.svg'
 
-const Navbar = class extends React.Component {
+const Header = class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -43,38 +44,7 @@ const Navbar = class extends React.Component {
               <span className="">Menu</span>
             </button>
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-              <ul className="navbar-nav">
-                <li className="nav-item">
-                  <Link className="navbar-item" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="navbar-item" to="/projects/virtualtours">
-                    Virtual Tours
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="navbar-item" to="/projects/animations">
-                    Animations
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="navbar-item" to="/projects/visualizations">
-                    Visualizations
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="navbar-item" to="/pricing">
-                    Pricing
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="navbar-item" to="/contact">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
+              <Menu />
             </div>
           </nav>
         </div>
@@ -83,4 +53,4 @@ const Navbar = class extends React.Component {
   }
 }
 
-export default Navbar
+export default Header

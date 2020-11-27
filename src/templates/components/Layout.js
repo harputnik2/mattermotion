@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from './Footer'
-import Navbar from './Navbar'
+import Header from './Header'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 import './all.scss'
@@ -39,7 +39,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="http://mattermotion.com" />
         <meta property="og:image" content={`${withPrefix('/')}img/logo.svg`} />
       </Helmet>
-      <Navbar />
+      <Header />
       <div>{children}</div>
       <Footer />
     </div>
