@@ -25,26 +25,26 @@ const Footer = class extends React.Component {
               <div className="socials">
                 <ul>
                   <li>
-                    <Link to="http://behance.com">
-                      <span class="social">BE</span>
-                    </Link>
+                    <a href="http://behance.com">
+                      <span className="social">BE</span>
+                    </a>
                   </li>
                   <li>
-                    <Link to="http://facebook.com">
-                      <span class="social">FB</span>
-                    </Link>
+                    <a href="http://facebook.com">
+                      <span className="social">FB</span>
+                    </a>
                   </li>
                 </ul>
               </div>
               <div className="lang-selection">
                 <ul>
                   <li>
-                    <span class="small">
+                    <span className="small">
                       English
                     </span>
                   </li>
                   <li>
-                    <span class="small">
+                    <span className="small">
                       Polish
                     </span>
                   </li>

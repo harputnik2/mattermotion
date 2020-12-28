@@ -32,7 +32,7 @@
 
 .category-link {
   &-elements {
-    margin: $spacing-xxl 0;
+    margin: $spacing-l 0;
     cursor: pointer;
     position: relative;
     width: 60%;
@@ -40,6 +40,7 @@
     text-align: left;
     .graphic {
       width: 120%;
+      height: 420px;
       transition: all linear 0.3s;
       &-holder {
         // this is outer element!!
@@ -49,11 +50,11 @@
     }
     .title {
       position: absolute;
-      right: -$spacing-m;
-      top: $spacing-m;
-      padding: $spacing-m $spacing-m 4*$spacing-m;
+      right: -$spacing-s;
+      top: $spacing-s;
+      padding: $spacing-s $spacing-s 5*$spacing-s;
       background-color: $dark-brown;
-      h2 {
+      h3 {
         color: $concrete;
         font-weight: 100;
       }
@@ -135,5 +136,67 @@
     &:nth-of-type(3) {
       text-align: left;
     }
+  }
+}
+
+.whatwedo-section {
+  padding-bottom: $spacing-xxl;
+  &:after {
+    box-sizing: content-box;
+    padding-top: $spacing-xxl;
+    padding-bottom: $spacing-xxl;
+  }
+}
+
+.contact-section {
+  background-color: $dark-brown;
+  padding: $spacing-xxl 0;
+  color: white;
+  &:after, &:before {
+    background-color: $ash;
+    z-index: 100;
+  }
+  &:before {
+    top: $spacing-xxl;
+    margin-top: -$spacing-m;
+  }
+  .caption {
+    &:before {
+      background-color: $concrete;
+      z-index: 101;
+    }
+    margin-bottom: $spacing-xxl;
+  }
+  .contact-details {
+    &--field {
+      margin: $spacing-m 0;
+      .label {
+        margin-bottom: 0;
+      }
+      h4 {
+        font-weight: 300;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  .form-holder {
+    overflow: hidden;
+    padding-left: $spacing-xxl;
+    padding-top: $spacing-m;
+    margin-top: -$spacing-m;
+    margin-left: -$spacing-xxl;
+  }
+}
+
+.testimonials-section {
+  padding-top: $spacing-xxl;
+  &:before {
+    display: none;
+  }
+  &:after {
+    box-sizing: content-box;
+    padding-top: $spacing-xxl;
+    padding-bottom: $spacing-xxl;
   }
 }

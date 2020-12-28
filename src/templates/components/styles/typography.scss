@@ -45,6 +45,7 @@ h6 {
 p {
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: $spacing-xs;
 }
 
 .small {
@@ -65,11 +66,19 @@ p {
   &:before {
     content: '';
     display: block;
-    width: 200px;
+    width: 500px;
     height: 8px;
     background-color: $black;
     position: absolute;
-    top: -$spacing-xl;
-    left: -200px;
+    top: -$spacing-m;
+    left: -500px;
   }
+}
+
+.label {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: $ash;
 }
