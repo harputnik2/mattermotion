@@ -13,17 +13,14 @@ const Header = class extends React.Component {
   }
 
   toggleMenu = () => {
-    // toggle the active boolean in the state
     this.setState(
       {
         active: !this.state.active,
       },
-      // after state has been updated,
       () => {
-        // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
+              navBarActiveClass: 'mobile-menu-visible',
             })
           : this.setState({
               navBarActiveClass: '',
@@ -34,13 +31,22 @@ const Header = class extends React.Component {
 
   render() {
     return (
-      <div className="nav-holder">
+      <div className={`${this.state.navBarActiveClass} nav-holder`}>
         <div className="container">
           <nav className="main-nav navbar navbar-expand-lg" role="navigation" aria-label="main-navigation">
             <Link to="/" className="navbar-brand" title="Logo">
               <img src={logo} className="logo" alt="Matter Motion" />
             </Link>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              onClick={() => this.toggleMenu()}
+            >
               <span className="">Menu</span>
             </button>
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">

@@ -13,7 +13,7 @@ export const Hero = () => {
       <div className="hero-content">
         <div className="container">
           <div className="hero-content">
-            <h1>This is Matter Motion</h1>
+            <h1>This is Matter&nbsp;Motion</h1>
             <div className="hero-buttons">
               <button className="button">
                 <span>
