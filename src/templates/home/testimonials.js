@@ -1,4 +1,20 @@
 import React from 'react'
+import zaha from '../../../static/media/zaha-hadid.png'
+
+const Testimonial = () => {
+  return (
+    <div className="testimonial">
+      <span className="testimonial__symbol"></span>
+      <p class="testimonial__quote">
+        Working with Szymon was a real pleasure. All of my animations came out better than expected.
+      </p>
+      <span className="testimonial__author">
+        Zaha Hadid
+      </span>
+      <img className="testimonial__logo" src={zaha} />
+    </div>
+  )
+}
 
 export const Testimonials = ({content}) => {
 
@@ -6,22 +22,17 @@ export const Testimonials = ({content}) => {
     <section className="mm-section testimonials-section">
       <div className="container">
         <div className="section-content">
-          <h2 className="caption">What Others Say About Us</h2>
-          <p>
-            So she was considering in her own mind (as well as she could, for the hot day made her feel very
-            sleepy and stupid), whether the pleasure of making a daisy-chain would be worth the trouble of
-            getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by
-            her.
-          </p>
-          <p>
-            There was nothing so very remarkable in that; nor did Alice think it so very much out of the way to
-            hear the Rabbit say to itself, “Oh dear! Oh dear! I shall be late!” (when she thought it over afterwards,
-            it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural);
-            but when the Rabbit actually took a watch out of its waistcoat-pocket, and looked at it, and then hurried
-            on, Alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with
-            either a waistcoat-pocket, or a watch to take out of it, and burning with curiosity, she ran across the
-            field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge.
-          </p>
+          <div className="row">
+            <div className="col-sm">
+              <Testimonial />
+            </div>
+            <div className="col-sm">
+              <Testimonial />
+            </div>
+            <div className="col-sm">
+              <Testimonial />
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -98,17 +98,20 @@
     margin: $spacing-l 0;
     cursor: pointer;
     position: relative;
-    width: 60%;
+    width: 70%;
     display: inline-block;
     text-align: left;
     .graphic {
-      width: 120%;
+      width: 100%;
       height: 420px;
       transition: all linear 0.3s;
       &-holder {
         // this is outer element!!
         border: 1px solid $black;
         overflow: hidden;
+      }
+      video {
+        width: 100%;
       }
     }
     .title {
@@ -168,10 +171,6 @@
       width: 40%;
     }
     &:hover {
-      .graphic {
-        margin-left: -20%;
-        transition: all 4s;
-      }
       .title {
         .category-arrow {
           span {
@@ -254,6 +253,7 @@
 
 .testimonials-section {
   padding-top: $spacing-xxl;
+  background-color: $white;
   &:before {
     display: none;
   }
@@ -261,5 +261,23 @@
     box-sizing: content-box;
     padding-top: $spacing-xxl;
     padding-bottom: $spacing-xxl;
+  }
+}
+
+.testimonial {
+  background-color: $silver;
+  max-width: 400px;
+  &__symbol {
+
+  }
+  &__quote {
+
+  }
+  &__author {
+
+  }
+  &__logo {
+    width: 80%;
+    max-width: 200px;
   }
 }
