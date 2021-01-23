@@ -36,20 +36,6 @@ const Footer = class extends React.Component {
                   </li>
                 </ul>
               </div>
-              <div className="lang-selection">
-                <ul>
-                  <li>
-                    <span className="small">
-                      English
-                    </span>
-                  </li>
-                  <li>
-                    <span className="small">
-                      Polish
-                    </span>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import zaha from '../../../static/media/zaha-hadid.png'
+import spacex from '../../../static/media/spacex.png'
 
 const Testimonial = () => {
   return (
@@ -9,9 +9,9 @@ const Testimonial = () => {
         Working with Szymon was a real pleasure. All of my animations came out better than expected.
       </p>
       <span className="testimonial__author">
-        Zaha Hadid
+        Elon Musk
       </span>
-      <img className="testimonial__logo" src={zaha} />
+      <img className="testimonial__logo" src={spacex} />
     </div>
   )
 }
@@ -21,6 +21,11 @@ export const Testimonials = ({content}) => {
   return (
     <section className="mm-section testimonials-section">
       <div className="container">
+        <div className="row">
+          <div className="col-sm">
+            <h2 className="caption">What Others Say About Us</h2>
+          </div>
+        </div>
         <div className="section-content">
           <div className="row">
             <div className="col-sm">

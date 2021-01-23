@@ -95,7 +95,7 @@
 
 .category-link {
   &-elements {
-    margin: $spacing-l 0;
+    margin: $spacing-xl 0;
     cursor: pointer;
     position: relative;
     width: 70%;
@@ -253,7 +253,14 @@
 
 .testimonials-section {
   padding-top: $spacing-xxl;
+  padding-bottom: $spacing-xxxl;
   background-color: $white;
+  &:before, &:after {
+    z-index: 1;
+  }
+  .col-sm {
+    padding: 0 $spacing-m;
+  }
   &:before {
     display: none;
   }
@@ -266,18 +273,45 @@
 
 .testimonial {
   background-color: $silver;
+  width: 100%;
   max-width: 400px;
+  padding: $spacing-l;
+  margin-top: $spacing-xxl;
   &__symbol {
-
+    display: block;
+    position: relative;
+    width: 60px;
+    height: 50px;
+    &:before, &:after {
+      display: block;
+      content: '';
+      width: 30px;
+    	height: 50px;
+    	transform: skew(-45deg);
+    	background: $dark-brown;
+      position: absolute;
+    }
+    &:before {
+      left: 24px;
+    }
+    &:after {
+      left: 68px;
+    }
   }
   &__quote {
-
+    font-weight: 100;
+    padding: $spacing-sm 0;
+    color: $dark-brown
   }
   &__author {
-
+    text-align: right;
+    display: block;
   }
   &__logo {
     width: 80%;
     max-width: 200px;
+    margin: auto;
+    display: block;
+    margin-top: $spacing-sm;
   }
 }

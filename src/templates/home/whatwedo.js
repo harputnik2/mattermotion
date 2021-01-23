@@ -32,7 +32,6 @@ const CategoryLinkHolder = ({categoryName, categoryVideo, categoryTeaser}) => {
 }
 
 export const WhatWeDo = ({categories}) => {
-  console.log(categories);
   return (
     <section className="mm-section whatwedo-section">
       <div className="container">

@@ -9,17 +9,17 @@ export const Menu = () => (
       </Link>
     </li>
     <li className="nav-item">
-      <Link className="navbar-item" to="/projects/virtualtours">
+      <Link className="navbar-item" to="/virtualtours">
         Virtual Tours
       </Link>
     </li>
     <li className="nav-item">
-      <Link className="navbar-item" to="/projects/animations">
+      <Link className="navbar-item" to="/animations">
         Animations
       </Link>
     </li>
     <li className="nav-item">
-      <Link className="navbar-item" to="/projects/visualizations">
+      <Link className="navbar-item" to="/visualizations">
         Visualizations
       </Link>
     </li>
