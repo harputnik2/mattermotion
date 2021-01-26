@@ -5,7 +5,7 @@ const Testimonial = () => {
   return (
     <div className="testimonial">
       <span className="testimonial__symbol"></span>
-      <p class="testimonial__quote">
+      <p className="testimonial__quote">
         Working with Szymon was a real pleasure. All of my animations came out better than expected.
       </p>
       <span className="testimonial__author">

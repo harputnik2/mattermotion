@@ -52,7 +52,7 @@ export default VisualizationsPage
 
 export const VisualizationsPageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___year] }) {
+    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "visualization"}}}) {
       edges {
         node {
           id
