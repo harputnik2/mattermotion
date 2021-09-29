@@ -1,0 +1,20 @@
+@import "styles/variables";
+
+.caption {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: $font-normal-plus;
+  line-height: $spacing-sm;
+  position: relative;
+  margin-bottom: $spacing-l;
+  &:before {
+    content: '';
+    display: block;
+    width: $spacing-xl;
+    height: 8px;
+    background-color: $black;
+    position: absolute;
+    top: -$spacing-m;
+    left: -$spacing-xl;
+  }
+}

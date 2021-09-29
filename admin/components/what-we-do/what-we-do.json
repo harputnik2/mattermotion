@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_what_we_do_what_we_dos",
+  "info": {
+    "name": "what_we_do",
+    "icon": "atom"
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "component",
+      "repeatable": true,
+      "component": "category.category"
+    }
+  }
+}

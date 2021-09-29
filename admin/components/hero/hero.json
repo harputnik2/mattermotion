@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_hero_heroes",
+  "info": {
+    "name": "hero",
+    "icon": "jedi"
+  },
+  "options": {},
+  "attributes": {
+    "slogan": {
+      "type": "string"
+    },
+    "hero_video": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "hero_poster": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}

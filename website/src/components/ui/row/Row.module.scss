@@ -1,0 +1,6 @@
+@import "styles/variables";
+
+.row {
+  display: flex;
+  margin: 0 (-$spacing-xl);
+}

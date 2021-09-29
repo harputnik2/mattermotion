@@ -1,0 +1,36 @@
+env:
+  browser: true
+  es2021: true
+extends:
+  - 'plugin:react/recommended'
+  - google
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+    js: true
+  ecmaVersion: 12
+  sourceType: module
+plugins:
+  - react
+rules:
+  semi:
+  - error
+  - never
+  quotes:
+    - error
+    - single
+  require-jsdoc:
+    - warn
+    - require:
+        FunctionDeclaration: false
+        ClassDeclaration: false
+        MethodDefinition: false
+        ArrowFunctionExpression: false
+        FunctionExpression: false
+  valid-jsdoc:
+      - warn
+      - requireParamDescription: false
+        requireReturnDescription: false
+  object-curly-spacing:
+    - error
+    - always

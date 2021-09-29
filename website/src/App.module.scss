@@ -1,0 +1,60 @@
+@import "styles/variables";
+@import "styles/font";
+
+.app {
+  font-family: 'archia';
+  font-size: $spacing-s;
+  line-height: $spacing-sm;
+  position: relative;
+}
+
+// typography
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 90px;
+  line-height: 104px;
+}
+
+h2 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+h3 {
+  font-size: 46px;
+  line-height: 64px;
+}
+
+h4 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: $spacing-xs;
+}
+
+.small {
+  font-size: 14px;
+  line-height: 21px;
+}

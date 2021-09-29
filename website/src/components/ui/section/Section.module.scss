@@ -1,0 +1,31 @@
+@import "styles/variables";
+
+.section {
+  padding: $spacing-m 0;
+  position: relative;
+  width: 100%;
+  &:before, &:after {
+    z-index: -1;
+    content: '';
+    display: block;
+    background-color: $black;
+    position: absolute;
+    left: 50%;
+    top: 0;
+  }
+  &:before {
+    width: 2*$spacing-xl;
+    height: 1px;
+    transform: translate(-50%, 0);
+  }
+  &:after {
+    width: 1px;
+    height: 100%;
+  }
+}
+
+.sectionContent {
+  position: relative;
+  z-index: 2;
+  padding: 0 $spacing-xl;
+}
