@@ -1,0 +1,42 @@
+@import "styles/variables";
+
+.form {
+  text-align: center;
+}
+
+.labeledField {
+  position: relative;
+  padding: $spacing-xs 0;
+  input, textarea {
+    position: relative;
+    z-index: 10;
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $ash;
+    padding: $spacing-xxs $spacing-s;
+    width: 100%;
+    outline: none !important;
+    transition: background-color 0.2s;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  input {
+    height: $spacing-l;
+  }
+  textarea {
+    min-height: 3*$spacing-l;
+  }
+  label {
+    position: absolute;
+    top: $spacing-s;
+    left: $spacing-s;
+    color: $concrete;
+    font-size: 14px;
+    padding-top: 2px;
+  }
+  input, textarea {
+    &:focus, &:not(:invalid) {
+      background-color: $dark-brown;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import Nav from 'components/nav'
+
 import logo from 'static/logo_icon.svg'
 
 import cx from 'classnames'
@@ -12,17 +14,7 @@ export default function Header() {
   return (
     <div className={ cx(styles.header, { [styles.homeHeader]: isHomepage }) }>
       <img src={logo} className={styles.logo} />
-      <nav className={styles.nav}>
-        <Link className={styles.navItem} to='/'>
-          Home
-        </Link>
-        <Link className={styles.navItem} to='/visualizations/1'>
-          Visualizations
-        </Link>
-        <Link className={styles.navItem} to='/'>
-          Contact
-        </Link>
-      </nav>
+      <Nav orientation='horizontal' color={isHomepage ? 'white' : 'black'} />
     </div>
   )
 }

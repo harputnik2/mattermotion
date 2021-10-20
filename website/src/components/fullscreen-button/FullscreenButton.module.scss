@@ -1,0 +1,102 @@
+@import "styles/variables";
+
+.fullScreen {
+  position: absolute;
+  top: $spacing-xxxl;
+  left: 50%;
+  // right: $spacing-s;
+  // bottom: 50%;
+  transform: translate(-50%, -$spacing-s);
+  margin-top: -20px;
+  width: 100px;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  // &:before {
+  //   content: '';
+  //   display: block;
+  //   width: 60px;
+  //   height: 60px;
+  //   background-color: $silver;
+  //   border-radius: 100%;
+  //   position: absolute;
+  //   left: 12px;
+  //   top: -14px;
+  //   transition: all 0.5s linear;
+  //   z-index: -1;
+  // }
+}
+
+.fullScreenText {
+  padding-top: 2px;
+  font-size: 10px;
+  text-transform: uppercase;
+  // transition: all 0.4s;
+  // font-weight: 600;
+}
+
+.fullScreenIcon {
+  // width: 14px;
+  // height: 14px;
+  // border: 2px black dashed;
+  display: block;
+  transition: all 0.1s;
+  transform: rotate(-90deg);
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  span {
+    background-color: $black;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s linear;
+    &:first-child {
+      height: 60px;
+      width: 1px;
+    }
+    &:last-child {
+      width: 40px;
+      height: 1px;
+      &:before, &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 1px;
+        background-color: inherit;
+        right: 0;
+      }
+      &:before {
+        transform: rotate(45deg) translate(-2px, -3px);
+      }
+      &:after {
+        transform: rotate(-45deg) translate(-2px, 3px);
+      }
+    }
+  }
+}
+
+.fullScreen:hover {
+  // .fullScreenText {
+  //   // text-decoration: underline;
+  //   transform: scale(1.1);
+  // }
+  .fullScreenIcon {
+    // transform: scale(1.1, 1.1);
+    span {
+      &:first-child {
+        height: 40px;
+      }
+      &:last-child {
+        width: 60px;
+      }
+    }
+  }
+  // &:before {
+  //   filter: brightness(1.1);
+  // }
+}

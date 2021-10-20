@@ -1,0 +1,35 @@
+@import "styles/variables";
+
+.artpiecePage {
+  padding: $spacing-xxl $spacing-l 0;
+  background-color: $concrete;
+  position: relative;
+}
+
+.artpieceHeader {
+  text-align: center;
+}
+
+.artpiecePreview {
+  margin: 0 (-$spacing-l);
+  padding: 0 $spacing-xxl;
+  padding: 0 $spacing-xxxl;
+  overflow: hidden;
+  background-color: $passepartout;
+  img {
+    margin-bottom: -10px;
+  }
+}
+
+.artpieceDetails {
+  padding: $spacing-m 0;
+  // position: absolute;
+  // bottom: 0;
+  // left: $spacing-xxxxl;
+  // right: $spacing-xxxxl;
+  // background-color: rgba(255, 255, 255, 0.55);
+  h6 {
+    text-transform: capitalize;
+    margin-bottom: $spacing-s;
+  }
+}

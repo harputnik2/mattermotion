@@ -11,6 +11,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 figure,
 blockquote,
@@ -46,7 +48,6 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
-  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */

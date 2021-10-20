@@ -3,4 +3,14 @@
 .column {
   flex: 1;
   padding: 0 $spacing-xl;
+  &.smallPadding {
+    padding: 0 $spacing-s;
+  }
+  &.mediumPadding {
+    padding: 0 $spacing-m;
+  }
+  &.threeInRow {
+    min-width: 33.33333%;
+    max-width: 33.33333%;
+  }
 }

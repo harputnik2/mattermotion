@@ -1,11 +1,11 @@
 @import "styles/variables";
 
 .section {
-  padding: $spacing-m 0;
+  padding: $spacing-l 0;
   position: relative;
   width: 100%;
   &:before, &:after {
-    z-index: -1;
+    z-index: 1;
     content: '';
     display: block;
     background-color: $black;
@@ -21,6 +21,25 @@
   &:after {
     width: 1px;
     height: 100%;
+  }
+}
+
+.darkSection {
+  background-color: $dark-brown;
+  color: $white;
+  padding: 2*$spacing-l 0;
+  &:before, &:after {
+    background-color: $white;
+  }
+  &:before {
+    top: $spacing-l;
+  }
+}
+
+.sectionAfterDark {
+  padding-top: 2*$spacing-l;
+  &:before {
+    display: none;
   }
 }
 

@@ -14,7 +14,13 @@
     height: 8px;
     background-color: $black;
     position: absolute;
-    top: -$spacing-m;
+    top: -$spacing-l;
     left: -$spacing-xl;
+  }
+}
+
+.onDark {
+  &:before {
+    background-color: $white;
   }
 }

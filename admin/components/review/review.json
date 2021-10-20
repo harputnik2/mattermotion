@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_review_reviews",
+  "info": {
+    "name": "review",
+    "icon": "female"
+  },
+  "options": {},
+  "attributes": {
+    "author": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

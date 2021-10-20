@@ -1,0 +1,91 @@
+@import "styles/variables";
+
+.collectionCard {
+  cursor: pointer;
+}
+
+.cardIllustration {
+  overflow: hidden;
+  height: 260px;
+  img {
+    line-height: 1;
+    transition: all 0.3s;
+  }
+}
+
+.cardDetails {
+  position: relative;
+  background-color: $dark-brown;
+  color: white;
+  margin-left: $spacing-l;
+  transform: translate(0, -50%);
+  padding: $spacing-s $spacing-s 3*$spacing-s;
+}
+
+.cardTitle {
+  margin: 0;
+  margin-bottom: $spacing-xxs;
+}
+
+.cardDescription {
+  font-size: 12px;
+}
+
+.linkArrow {
+  position: absolute;
+  bottom: $spacing-s;
+  left: $spacing-s;
+  span {
+    background-color: $concrete;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s linear;
+    &:first-child {
+      height: 20px;
+      width: 1px;
+    }
+    &:last-child {
+      width: 20px;
+      height: 1px;
+      &:before, &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 1px;
+        background-color: inherit;
+        right: 0;
+      }
+      &:before {
+        transform: rotate(45deg) translate(-2px, -3px);
+      }
+      &:after {
+        transform: rotate(-45deg) translate(-2px, 3px);
+      }
+    }
+  }
+}
+
+.collectionCard {
+  &:hover {
+    .cardIllustration {
+      img {
+        transform: scale(1.05, 1.05);
+      }
+    }
+    .cardDetails {
+      .linkArrow {
+        span {
+          &:first-child {
+            height: 0;
+          }
+          &:last-child {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "styles/variables";
+
+.virtualTour {
+  text-align: center;
+  iframe {
+    min-width: 100%;
+    min-height: 100%;
+  }
+}

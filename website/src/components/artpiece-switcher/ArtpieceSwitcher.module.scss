@@ -1,0 +1,108 @@
+@import "styles/variables";
+
+.artpieceSwitcher {
+  // padding: $spacing-s 0;
+  padding: $spacing-m $spacing-s;
+  display: flex;
+  justify-content: space-between;
+  // margin-bottom: -92px;
+  position: relative;
+}
+
+.switchButton {
+  position: absolute;
+  right: 0;
+  width: 200px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.circle {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: $silver;
+  border-radius: 100%;
+  position: absolute;
+  right: 0;
+  transition: all 0.5s linear;
+}
+
+.arrow {
+  display: block;
+  position: absolute;
+  background-color: $black;
+  left: 60px;
+  bottom: 50%;
+  transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 100px;
+  height: 1px;
+  &:before, &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    background-color: inherit;
+    right: 0;
+  }
+  &:before {
+    transform: rotate(45deg) translate(-2px, -3px);
+  }
+  &:after {
+    transform: rotate(-45deg) translate(-2px, 3px);
+  }
+}
+
+.action {
+  text-transform: uppercase;
+  font-size: 10px;
+  position: absolute;
+  right: 155px;
+  top: 50%;
+  transform: translate(0, -50%);
+  // transition: all 0.4s;
+  // padding-bottom: 14px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: relative;
+  // top: $spacing-xl;
+  top: 0;
+  width: 140px;
+  height: 60px;
+}
+
+.prev {
+  .switchButton {
+    right: auto;
+    left: 0;
+  }
+  .circle {
+    right: auto;
+    left: 0;
+  }
+  .arrow {
+    transform: rotate(180deg);
+    left: auto;
+    right: 60px;
+  }
+  .action {
+    right: auto;
+    left: 155px;
+  }
+}
+
+.prev:hover, .next:hover {
+  .circle {
+    filter: brightness(1.1);
+  }
+  .arrow {
+    width: 120px;
+  }
+  .action {
+    // text-decoration: underline;
+    // transform: scale(1.1) translate(0, -50%);
+  }
+}

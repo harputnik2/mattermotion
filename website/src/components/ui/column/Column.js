@@ -1,11 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import cx from 'classnames'
+
 import styles from './Column.module.scss'
 
-export default function Column({ children }) {
+export default function Column({ children, padding, rowLimit }) {
   return (
-    <div className={styles.column}>
+    <div className={
+      cx(styles.column,
+          { [styles.mediumPadding]: padding === 'medium' },
+          { [styles.smallPadding]: padding === 'small' },
+          { [styles.threeInRow]: rowLimit === 3 },
+      )
+    }>
       { children }
     </div>
   )
@@ -13,4 +21,6 @@ export default function Column({ children }) {
 
 Column.propTypes = {
   children: PropTypes.node,
+  padding: PropTypes.string,
+  rowLimit: PropTypes.number,
 }

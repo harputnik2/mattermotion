@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/virtual-tours",
+      "handler": "virtual-tours.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/virtual-tours/count",
+      "handler": "virtual-tours.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/virtual-tours/:id",
+      "handler": "virtual-tours.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/virtual-tours",
+      "handler": "virtual-tours.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/virtual-tours/:id",
+      "handler": "virtual-tours.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/virtual-tours/:id",
+      "handler": "virtual-tours.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

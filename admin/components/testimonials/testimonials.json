@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_testimonials_testimonials",
+  "info": {
+    "name": "testimonials",
+    "icon": "grin-hearts"
+  },
+  "options": {},
+  "attributes": {
+    "review": {
+      "type": "component",
+      "repeatable": true,
+      "component": "review.review"
+    }
+  }
+}

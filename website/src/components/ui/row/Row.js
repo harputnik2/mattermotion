@@ -1,11 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import cx from 'classnames'
+
 import styles from './Row.module.scss'
 
-export default function Row({ children }) {
+export default function Row({ children, padding }) {
   return (
-    <div className={styles.row}>
+    <div className={
+      cx(styles.row,
+          { [styles.mediumPadding]: padding === 'medium' },
+          { [styles.smallPadding]: padding === 'small' },
+      )
+    }>
       { children }
     </div>
   )
@@ -13,4 +20,5 @@ export default function Row({ children }) {
 
 Row.propTypes = {
   children: PropTypes.node,
+  padding: PropTypes.string,
 }

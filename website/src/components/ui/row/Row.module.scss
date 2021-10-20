@@ -3,4 +3,11 @@
 .row {
   display: flex;
   margin: 0 (-$spacing-xl);
+  flex-wrap: wrap;
+  &.smallPadding {
+    margin: 0 (-$spacing-s);
+  }
+  &.mediumPadding {
+    margin: 0 (-$spacing-m);
+  }
 }
