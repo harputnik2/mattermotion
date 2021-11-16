@@ -10,7 +10,7 @@ import styles from './Footer.module.scss'
 export default function Footer() {
   return (
     <div className={styles.footer}>
-      <Row>
+      <Row forceMobileColumns={false}>
         <Column>
           <div className={styles.logo}>
             <Link to="/" title="Logo">

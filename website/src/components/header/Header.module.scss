@@ -9,7 +9,7 @@
   left: 0;
   right: 0;
   height: $spacing-xxl;
-  padding: $spacing-m $spacing-l;
+  padding: $spacing-m $spacing-xl;
   z-index: 10;
   background-color: $white;
 }
@@ -19,11 +19,94 @@
   margin-right: auto;
 }
 
+.mobileMenuOn {
+  color: $black;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
 // home header theme
 
 .homeHeader {
   background-color: transparent;
   .logo {
     filter: invert(1);
+  }
+  .mobileMenuOn {
+    color: $white;
+  }
+}
+
+// mobile menu
+
+.mobileNav {
+  display: none;
+}
+
+.mobileMenuOff {
+  color: $white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.mobileMenuHolder {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $black;
+  display: none;
+  &.mobileMenuVisible {
+    display: block;
+  }
+}
+
+.mobileMenuHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  padding: $spacing-m;
+  z-index: 10;
+}
+
+.mobileMenuLogo {
+  height: $spacing-m;
+  margin-right: auto;
+  filter: invert(1);
+}
+
+.mobileNavHolder {
+  padding: $spacing-xxxl $spacing-l;
+  font-size: $spacing-m;
+}
+
+// media queries
+
+@media screen and (max-width: $breakpoint-max-small) {
+  .header {
+    padding: $spacing-m;
+    height: 80px;
+  }
+  .logo {
+    height: $spacing-m;
+  }
+  .desktopNav {
+    display: none;
+  }
+  .mobileNav {
+    display: block;
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-phone-mini) {
+  .header, .mobileMenuHeader {
+    padding: $spacing-s;
+    height: 60px;
   }
 }

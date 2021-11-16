@@ -51,3 +51,25 @@
     max-height: 80%;
   }
 }
+
+
+@media screen and (max-width: $breakpoint-max-medium) {
+  .review {
+    margin: 0 (-$spacing-m);
+    width: auto;
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-small) {
+  .review {
+    min-width: 200px;
+    margin: $spacing-m auto;
+  }
+  .logo {
+    height: 2*$spacing-l;
+    line-height: 2*$spacing-l;
+    text-align: center;
+    margin-top: $spacing-m;
+  }
+}

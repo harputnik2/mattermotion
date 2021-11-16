@@ -50,3 +50,9 @@
     }
   }
 }
+
+@media screen and (max-width: $breakpoint-max-phone) {
+  .button {
+    width: 100%;
+  }
+}

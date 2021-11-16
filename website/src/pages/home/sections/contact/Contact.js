@@ -31,16 +31,14 @@ export default function Contact() {
         <Row>
           <Column>
             <Caption content='contact' onDark={true} />
-            <div className="contact-details--field">
-              <p className="label">
+            <div className={styles.contactDetails}>
+              <p className={styles.contactLabel}>
                 email
               </p>
               <h4>
                 { data.homepage.contact.email }
               </h4>
-            </div>
-            <div className="contact-details--field">
-              <p className="label">
+              <p className={styles.contactLabel}>
                 phone
               </p>
               <h4>
@@ -67,7 +65,12 @@ export default function Contact() {
                 <textarea name='message' required />
                 <label htmlFor='message'>Message:</label>
               </div>
-              <Button type='submit' content='send message' />
+              <div className={styles.formButton}>
+                <Button
+                  type='submit'
+                  content='send message'
+                />
+              </div>
             </form>
           </Column>
         </Row>

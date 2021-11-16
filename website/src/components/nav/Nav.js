@@ -6,7 +6,30 @@ import cx from 'classnames'
 
 import styles from './Nav.module.scss'
 
-export default function Nav({ color, orientation }) {
+export default function Nav({ color, orientation, setMenuVisible }) {
+  const links = [
+    {
+      title: 'Home',
+      to: '/',
+    },
+    {
+      title: 'Animations',
+      to: '/animations',
+    },
+    {
+      title: 'Virtual Tours',
+      to: '/virtual-tours',
+    },
+    {
+      title: 'Visualizations',
+      to: '/visualizations',
+    },
+    {
+      title: 'Contact',
+      to: '/',
+    },
+  ]
+
   return (
     <nav
       className={
@@ -17,21 +40,18 @@ export default function Nav({ color, orientation }) {
         )
       }
     >
-      <Link className={styles.navItem} to='/'>
-        Home
-      </Link>
-      <Link className={styles.navItem} to='/animations'>
-        Animations
-      </Link>
-      <Link className={styles.navItem} to='/virtual-tours'>
-        Virtual Tours
-      </Link>
-      <Link className={styles.navItem} to='/visualizations'>
-        Visualizations
-      </Link>
-      <Link className={styles.navItem} to='/'>
-        Contact
-      </Link>
+      {links.map((link, index) => {
+        return (
+          <Link
+            key={index}
+            className={styles.navItem}
+            to={link.to}
+            onClick={setMenuVisible ? () => setMenuVisible(false) : undefined}
+          >
+            {link.title}
+          </Link>
+        )
+      })}
     </nav>
   )
 }
@@ -39,4 +59,5 @@ export default function Nav({ color, orientation }) {
 Nav.propTypes = {
   color: PropTypes.string,
   orientation: PropTypes.string,
+  setMenuVisible: PropTypes.function,
 }

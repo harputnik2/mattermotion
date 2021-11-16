@@ -24,3 +24,19 @@
     background-color: $white;
   }
 }
+
+@media screen and (max-width: $breakpoint-max-medium) {
+  .caption {
+    line-height: $spacing-xs;
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-small) {
+  .caption {
+    transform: translate($spacing-m, 0);
+    &:before {
+      top: -1px;
+      margin-left: -$spacing-s;
+    }
+  }
+}

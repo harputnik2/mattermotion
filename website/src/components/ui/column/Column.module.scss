@@ -14,3 +14,15 @@
     max-width: 33.33333%;
   }
 }
+
+@media screen and (max-width: $breakpoint-max-small) {
+  .column {
+    padding: 0 $spacing-l;
+    &.smallPadding {
+      padding: 0 $spacing-xs;
+    }
+    &.mediumPadding {
+      padding: 0 $spacing-s;
+    }
+  }
+}

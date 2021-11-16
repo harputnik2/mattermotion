@@ -13,26 +13,9 @@
   }
 }
 
-.socials {
-  li {
-    display: inline-block;
-  }
-  .social {
-    display: block;
-    width: 30px;
-    height: 30px;
-    margin-right: $spacing-s;
-    background-color: white;
-    border-radius: 100%;
-    color: $dark-brown;
-    text-align: center;
-    line-height: 30px;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: none;
-    .social {
-      transform: scale(1.1, 1.1);
-    }
+@media screen and (max-width: $breakpoint-max-small) {
+  .logo {
+    max-width: $spacing-xxxl;
+    margin-bottom: $spacing-xl;
   }
 }

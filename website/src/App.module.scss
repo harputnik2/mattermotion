@@ -6,6 +6,7 @@
   font-size: $spacing-s;
   line-height: $spacing-sm;
   position: relative;
+  overflow: hidden;
 }
 
 // typography
@@ -21,6 +22,18 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 90px;
   line-height: 104px;
+  @media screen and (max-width: $breakpoint-max-medium) {
+    font-size: 64px;
+    line-height: 72px;
+  }
+  @media screen and (max-width: $breakpoint-max-small) {
+    font-size: 46px;
+    line-height: 52px;
+  }
+  @media screen and (max-width: $breakpoint-max-phone) {
+    font-size: 38px;
+    line-height: 44px;
+  }
 }
 
 h2 {
@@ -31,11 +44,39 @@ h2 {
 h3 {
   font-size: 46px;
   line-height: 64px;
+  @media screen and (max-width: $breakpoint-max-medium) {
+    font-size: 38px;
+    line-height: 44px;
+  }
+  @media screen and (max-width: $breakpoint-max-small) {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  @media screen and (max-width: $breakpoint-max-phone) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  @media screen and (max-width: $breakpoint-max-phone-mini) {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 
 h4 {
   font-size: 32px;
   line-height: 40px;
+  @media screen and (max-width: $breakpoint-max-medium) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  @media screen and (max-width: $breakpoint-max-small) {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  @media screen and (max-width: $breakpoint-max-phone) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 h5 {

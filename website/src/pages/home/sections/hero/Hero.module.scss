@@ -27,6 +27,7 @@
 
 .heroSlogan {
   color: $white;
+  text-align: center;
 }
 
 .heroContent {
@@ -42,4 +43,22 @@
 
 .heroButtons {
   margin-top: $spacing-l;
+  display: flex;
+}
+
+@media screen and (max-width: $breakpoint-max-phone) {
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: $spacing-xxl;
+    padding: 0 $spacing-m;
+  }
+  .heroContent {
+    top: auto;
+    transform: translate(0, 0);
+    bottom: $spacing-m;
+    height: 100%;
+    padding-top: $spacing-xxl;
+  }
 }
