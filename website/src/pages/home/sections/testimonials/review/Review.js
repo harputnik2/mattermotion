@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { rootpath } from 'consts'
 import styles from './Review.module.scss'
 
 export default function Review({
@@ -20,7 +19,7 @@ export default function Review({
         {author}
       </span>
       <div className={styles.logo}>
-        <img src={rootpath + logo} />
+        <img src={logo} />
       </div>
     </div>
   )

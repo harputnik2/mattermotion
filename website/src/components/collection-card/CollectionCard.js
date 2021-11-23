@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-import { categories, rootpath } from 'consts'
+import { categories } from 'consts'
 
 import styles from './CollectionCard.module.scss'
 
@@ -21,7 +21,7 @@ export default function CollectionCard({
     <Link to={`${link}/${id}`} >
       <div className={styles.collectionCard}>
         <div className={styles.cardIllustration}>
-          <img src={rootpath + image} alt='dom' />
+          <img src={image} alt='dom' />
         </div>
         <div className={styles.cardDetails}>
           <h6 className={styles.cardTitle}>{title}</h6>

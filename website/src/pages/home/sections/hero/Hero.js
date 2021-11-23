@@ -4,7 +4,6 @@ import { useQuery, gql } from '@apollo/client'
 import { Button } from 'components/ui'
 import Loader from 'components/loader'
 
-import { rootpath } from 'consts'
 import styles from './Hero.module.scss'
 
 const HERO = gql`
@@ -36,7 +35,7 @@ export default function Hero() {
         <div className={styles.heroBg}>
           <video muted={true} autoPlay={true} loop>
             <source
-              src={rootpath + data.homepage.hero.hero_video.url}
+              src={data.homepage.hero.hero_video.url}
               type="video/mp4"
             />
           </video>

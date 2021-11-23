@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { rootpath } from 'consts'
 import styles from './CategoryCard.module.scss'
 
 export default function CategoryCard({
@@ -15,7 +14,7 @@ export default function CategoryCard({
         <div className={styles.graphicHolder}>
           <div className={styles.graphic}>
             <video muted={true} autoPlay={true} loop>
-              <source src={rootpath + categoryVideo} type="video/mp4" />
+              <source src={categoryVideo} type="video/mp4" />
             </video>
           </div>
         </div>

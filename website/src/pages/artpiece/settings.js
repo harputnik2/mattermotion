@@ -1,7 +1,7 @@
 import { VISUALIZATION, ANIMATION, VIRTUAL_TOUR } from './queries'
 import { Visualization, Animation, VirtualTour } from 'components/artpiece-type'
 
-import { categories, rootpath } from 'consts'
+import { categories } from 'consts'
 
 const visualizationSettings = {
   artpieceQuery: VISUALIZATION,
@@ -31,10 +31,10 @@ export const settings = (category) => {
 
 export const propsSettings = (category, data) => {
   return category === categories.VISUALIZATIONS ? {
-    visualization: rootpath + data.visualization.image.url,
+    visualization: data.visualization.image.url,
   } : category === categories.ANIMATIONS ? {
-    poster: rootpath + data.animation.poster.url,
-    animation: rootpath + data.animation.animation.url,
+    poster: data.animation.poster.url,
+    animation: data.animation.animation.url,
   } : {
     tour: data.virtualTour.tour_url,
   }
