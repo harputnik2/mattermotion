@@ -1,12 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 import cx from 'classnames'
 
 import styles from './Nav.module.scss'
 
 export default function Nav({ color, orientation, setMenuVisible }) {
+  const location = useLocation()
+  const currentLocation = location.pathname
+
   const links = [
     {
       title: 'Home',
@@ -44,7 +48,11 @@ export default function Nav({ color, orientation, setMenuVisible }) {
         return (
           <Link
             key={index}
-            className={styles.navItem}
+            className={
+              cx(styles.navItem,
+                  { [styles.active]: currentLocation === link.to },
+              )
+            }
             to={link.to}
             onClick={setMenuVisible ? () => setMenuVisible(false) : undefined}
           >
@@ -59,5 +67,5 @@ export default function Nav({ color, orientation, setMenuVisible }) {
 Nav.propTypes = {
   color: PropTypes.string,
   orientation: PropTypes.string,
-  setMenuVisible: PropTypes.function,
+  setMenuVisible: PropTypes.func,
 }

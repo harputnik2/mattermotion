@@ -12,8 +12,6 @@ export default function VirtualTour({ tour }) {
         height='540'
         src={tour}
         frameBorder='0'
-        webkitAllowFullscreen
-        mozAllowFullscreen
         allowFullScreen
       />
     </div>

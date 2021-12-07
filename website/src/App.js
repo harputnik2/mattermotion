@@ -20,7 +20,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <Router>
+    <Router basename={'/mm'}>
       <ApolloProvider client={client}>
         <div className={styles.app}>
           <Header />

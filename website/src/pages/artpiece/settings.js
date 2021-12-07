@@ -1,4 +1,4 @@
-import { VISUALIZATION, ANIMATION, VIRTUAL_TOUR } from './queries'
+import { VISUALIZATION, ANIMATION, VIRTUAL_TOUR } from 'consts'
 import { Visualization, Animation, VirtualTour } from 'components/artpiece-type'
 
 import { categories } from 'consts'

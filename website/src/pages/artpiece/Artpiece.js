@@ -37,7 +37,7 @@ export default function Artpiece({ category }) {
     <>
       <Loader loaded={!loading} />
       <div className={styles.artpiecePage}>
-        <ArtpieceSwitcher category={category} />
+        <ArtpieceSwitcher category={category} id={id} />
         <div className={styles.artpiecePreview}>
           <ArtpieceComponent {...artpieceProps} />
         </div>

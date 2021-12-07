@@ -24,3 +24,8 @@ Row.propTypes = {
   padding: PropTypes.string,
   forceMobileColumns: PropTypes.boolean,
 }
+
+Row.defaultProps = {
+  padding: '',
+  forceMobileColumns: false,
+}

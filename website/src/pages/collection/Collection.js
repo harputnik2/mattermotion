@@ -1,56 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useQuery, gql } from '@apollo/client'
+import { useQuery } from '@apollo/client'
 
 import Loader from 'components/loader'
 import CollectionCard from 'components/collection-card'
 import { Row, Column } from 'components/ui'
 
-import { categories } from 'consts'
+import { categories, VISUALIZATIONS, ANIMATIONS, VIRTUAL_TOURS } from 'consts'
 import styles from './Collection.module.scss'
-
-const VISUALIZATIONS = gql`
-  query GetVisualizations {
-    visualizations {
-      id
-      name
-      description
-      image {
-        url
-      }
-    }
-  }
-`
-
-const ANIMATIONS = gql`
-  query GetAnimations {
-    animations {
-      id
-      name
-      description
-      animation {
-        url
-      }
-      poster {
-        url
-      }
-    }
-  }
-`
-
-const VIRTUAL_TOURS = gql`
-  query GetVirtualTours {
-    virtualTours {
-      id
-      name
-      description
-      tour_url
-      poster {
-        url
-      }
-    }
-  }
-`
 
 export default function Collection({ category }) {
   const query = category === categories.VISUALIZATIONS ?
