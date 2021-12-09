@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
 import Nav from 'components/nav'
 
 import logo from 'static/logo_icon.svg'
@@ -16,7 +18,9 @@ export default function Header() {
 
   return (
     <div className={ cx(styles.header, { [styles.homeHeader]: isHomepage }) }>
-      <img src={logo} className={styles.logo} />
+      <Link to='/' className={styles.logo}>
+        <img src={logo} />
+      </Link>
       <div className={styles.desktopNav}>
         <Nav orientation='horizontal' color={isHomepage ? 'white' : 'black'} />
       </div>

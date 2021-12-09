@@ -13,8 +13,8 @@ export default function Footer() {
       <Row forceMobileColumns={true}>
         <Column>
           <div className={styles.logo}>
-            <Link to="/" title="Logo">
-              <img src={logo} alt="Matter Motion" />
+            <Link to='/' title='Logo'>
+              <img src={logo} alt='Matter Motion' />
             </Link>
           </div>
         </Column>

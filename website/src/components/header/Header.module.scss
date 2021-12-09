@@ -17,6 +17,10 @@
 .logo {
   height: $spacing-xl;
   margin-right: auto;
+  img {
+    display: block;
+    height: 100%;
+  }
 }
 
 .mobileMenuOn {
