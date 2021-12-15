@@ -30,7 +30,7 @@ export default function Nav({ color, orientation, setMenuVisible }) {
     },
     {
       title: 'Contact',
-      to: '/',
+      to: '/contact',
     },
   ]
 

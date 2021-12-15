@@ -1,0 +1,6 @@
+@import "styles/variables";
+
+.contact {
+  min-height: calc(100vh - 358px);
+  padding: $spacing-xxl $spacing-l $spacing-xl;
+}

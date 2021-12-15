@@ -1,6 +1,7 @@
 @import "styles/variables";
 
 .collectionPage {
+  min-height: calc(100vh - 358px);
   padding: $spacing-xxl $spacing-l $spacing-xl;
   background-color: $concrete;
 }

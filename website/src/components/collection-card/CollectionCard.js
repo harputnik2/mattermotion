@@ -18,7 +18,7 @@ export default function CollectionCard({
     category
 
   return (
-    <Link to={`${link}/${id}`} >
+    <Link to={`${link}/${id}`} className={styles.collectionCardLink}>
       <div className={styles.collectionCard}>
         <div className={styles.cardIllustration}>
           <img src={image} alt='dom' />

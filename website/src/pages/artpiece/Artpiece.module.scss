@@ -1,6 +1,7 @@
 @import "styles/variables";
 
 .artpiecePage {
+  min-height: calc(100vh - 358px);
   padding: $spacing-xxl $spacing-l 0;
   background-color: $concrete;
   position: relative;

@@ -8,6 +8,7 @@ import Header from './components/header'
 import Footer from './components/footer'
 
 import Home from './pages/home'
+import Contact from './pages/contact'
 import Collection from './pages/collection'
 import Artpiece from './pages/artpiece'
 
@@ -36,6 +37,9 @@ function App() {
             </Route>
             <Route exact path='/visualizations'>
               <Collection category={categories.VISUALIZATIONS} />
+            </Route>
+            <Route exact path='/contact'>
+              <Contact />
             </Route>
             <Route path='/animations/:id'>
               <Artpiece category={categories.ANIMATIONS} />

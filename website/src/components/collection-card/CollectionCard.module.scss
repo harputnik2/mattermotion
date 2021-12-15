@@ -30,6 +30,7 @@
 
 .cardDescription {
   font-size: 12px;
+  text-decoration: none;
 }
 
 .linkArrow {
@@ -67,6 +68,10 @@
       }
     }
   }
+}
+
+.collectionCardLink, .collectionCardLink:hover, .collectionCardLink:link, .collectionCardLink:active {
+  text-decoration: none;
 }
 
 .collectionCard {
