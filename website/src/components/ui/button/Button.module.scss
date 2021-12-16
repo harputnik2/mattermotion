@@ -51,6 +51,15 @@
   }
 }
 
+.darkButton {
+  &:before {
+    background-color: $black;
+  }
+  span {
+    color: white;
+  }
+}
+
 @media screen and (max-width: $breakpoint-max-phone) {
   .button {
     width: 100%;

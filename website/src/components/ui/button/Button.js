@@ -1,13 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// import cx from 'classnames'
+import cx from 'classnames'
 
 import styles from './Button.module.scss'
 
-export default function Button({ content, type }) {
+export default function Button({ content, type, color }) {
   return (
-    <button className={styles.button} type={type}>
+    <button className={
+      cx(styles.button,
+          { [styles.darkButton]: color === 'dark' },
+      )
+    }
+    type={type}
+    >
       <span>
         { content }
       </span>
@@ -18,4 +24,5 @@ export default function Button({ content, type }) {
 Button.propTypes = {
   content: PropTypes.string,
   type: PropTypes.string,
+  color: PropTypes.string,
 }
