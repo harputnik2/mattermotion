@@ -27,6 +27,7 @@ export default function Contact() {
   return (
     <>
       <Loader loaded={!loading} />
+      <div id='contact' />
       <Section theme='dark'>
         <Row>
           <Column>

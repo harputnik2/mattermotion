@@ -35,6 +35,7 @@ export default function WhatWeDo() {
   return (
     <>
       <Loader loaded={!loading} />
+      <div id='whatwedo' />
       <Section>
         <Caption content='what we do' />
         {data.homepage.what_we_do.category.map((category) => (

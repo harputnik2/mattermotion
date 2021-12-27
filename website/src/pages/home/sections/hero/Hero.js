@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-scroll'
 import { useQuery, gql } from '@apollo/client'
 
 import { Button } from 'components/ui'
@@ -43,8 +44,12 @@ export default function Hero() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroSlogan}>{data.homepage.hero.slogan}</h1>
           <div className={styles.heroButtons}>
-            <Button content='see what we do' />
-            <Button content='lets work together' />
+            <Link to='whatwedo' smooth={true} duration='100'>
+              <Button content='see what we do' />
+            </Link>
+            <Link to='contact' smooth={true} duration='160'>
+              <Button content='lets work together' />
+            </Link>
           </div>
         </div>
       </section>

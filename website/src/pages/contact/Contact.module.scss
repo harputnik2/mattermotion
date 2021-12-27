@@ -59,7 +59,7 @@
     padding-top: 2px;
   }
   input, textarea {
-    &:focus, &:not(:invalid) {
+    &:focus, &:not(:invalid), &:not([value=''])  {
       // background-color: $dark-brown;
     }
   }
@@ -73,10 +73,16 @@
   .contactDetails, .form {
     padding: $spacing-xs 0 $spacing-xl;
   }
+  .contactInvitation {
+    padding: $spacing-xl $spacing-s;
+  }
 }
 
 @media screen and (max-width: $breakpoint-max-phone) {
   .formButton {
     padding-right: $spacing-l;
+  }
+  .contactInvitation {
+    padding: $spacing-l $spacing-s;
   }
 }
