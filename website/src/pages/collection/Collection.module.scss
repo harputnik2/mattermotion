@@ -11,3 +11,15 @@
   padding: $spacing-xl 0;
   text-transform: capitalize;
 }
+
+@media screen and (max-width: $breakpoint-max-small) {
+  .collectionPageHeader {
+    padding: $spacing-s 0 $spacing-m;
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-phone) {
+  .collectionPageHeader {
+    padding: $spacing-xxs 0 $spacing-m;
+  }
+}

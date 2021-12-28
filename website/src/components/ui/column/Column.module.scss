@@ -24,5 +24,19 @@
     &.mediumPadding {
       padding: 0 $spacing-s;
     }
+    &.threeInRow {
+      min-width: 50%;
+      max-width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-phone) {
+  .column {
+    padding: 0 $spacing-l;
+    &.threeInRow {
+      min-width: 100%;
+      max-width: 100%;
+    }
   }
 }

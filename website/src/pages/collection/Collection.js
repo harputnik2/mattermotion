@@ -28,7 +28,7 @@ export default function Collection({ category }) {
         <h4 className={styles.collectionPageHeader}>
           {category.replace(/([A-Z])/g, ' $1')}
         </h4>
-        <Row padding='small'>
+        <Row padding='small' forceMobileColumns={true}>
           {data[category].map((artpiece) => (
             <Column key={artpiece.id} padding='small' rowLimit={3}>
               <CollectionCard

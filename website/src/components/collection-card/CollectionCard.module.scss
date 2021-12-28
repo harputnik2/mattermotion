@@ -19,7 +19,7 @@
   background-color: $dark-brown;
   color: white;
   margin-left: $spacing-l;
-  transform: translate(0, -50%);
+  transform: translate(0, -60px);
   padding: $spacing-s $spacing-s 3*$spacing-s;
 }
 
@@ -96,6 +96,12 @@
   }
 }
 
+@media screen and (min-width: $breakpoint-min-huge) {
+  .cardIllustration {
+    height: 340px;
+  }
+}
+
 @media screen and (max-width: $breakpoint-max-medium) {
   .cardIllustration {
     height: 220px;
@@ -114,10 +120,15 @@
   }
 }
 
-@media screen and (max-width: $breakpoint-max-small) {
+@media screen and (max-width: $breakpoint-max-phone) {
+  .collectionCardLink {
+    margin: auto;
+    display: block;
+    max-width: 440px;
+  }
+
   .cardIllustration {
-    height: 300px;
-    width: 440px
+    height: auto;
   }
   .cardDetails {
     position: static;
@@ -125,7 +136,7 @@
     color: $black;
     margin-left: 0;
     transform: translate(0, 0);
-    padding: $spacing-s 0;
+    padding: $spacing-xs 0 $spacing-m 0;
     text-decoration: none;
   }
   .cardTitle {
