@@ -14,7 +14,6 @@
 .artpiecePreview {
   margin: 0 (-$spacing-l);
   padding: 0 $spacing-xxl;
-  padding: 0 $spacing-xxxl;
   overflow: hidden;
   background-color: $passepartout;
   text-align: center;
@@ -24,14 +23,42 @@
 }
 
 .artpieceDetails {
+  text-align: center;
   padding: $spacing-m 0;
-  // position: absolute;
-  // bottom: 0;
-  // left: $spacing-xxxxl;
-  // right: $spacing-xxxxl;
-  // background-color: rgba(255, 255, 255, 0.55);
   h6 {
     text-transform: capitalize;
     margin-bottom: $spacing-s;
+  }
+  p {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-medium) {
+  .artpiecePreview {
+    padding: 0;
+    overflow: visible;
+    margin-bottom: 0;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-small) {
+  .artpiecePage {
+    padding: $spacing-xl $spacing-l 0;
+  }
+  .artpieceDetails {
+    padding: $spacing-m 0 $spacing-s;
+    h6 {
+      margin-bottom: $spacing-xs;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-phone-mini) {
+  .artpieceDetails {
+    padding: $spacing-s 0 $spacing-xs;
   }
 }

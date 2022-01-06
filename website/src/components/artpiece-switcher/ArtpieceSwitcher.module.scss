@@ -1,12 +1,10 @@
 @import "styles/variables";
 
 .artpieceSwitcher {
-  // padding: $spacing-s 0;
-  padding: $spacing-s $spacing-s $spacing-s;
+  padding: $spacing-s;
   display: flex;
   justify-content: space-between;
   height: 100px;
-  // margin-bottom: -92px;
   position: relative;
   a, a:hover, a:active, a:link {
     color: $black;
@@ -66,14 +64,11 @@
   right: 155px;
   top: 50%;
   transform: translate(0, -50%);
-  // transition: all 0.4s;
-  // padding-bottom: 14px;
 }
 
 .prev, .next {
   cursor: pointer;
   position: relative;
-  // top: $spacing-xl;
   top: 0;
   width: 140px;
   height: 60px;
@@ -106,8 +101,34 @@
   .arrow {
     width: 120px;
   }
-  .action {
-    // text-decoration: underline;
-    // transform: scale(1.1) translate(0, -50%);
+}
+
+@media screen and (max-width: $breakpoint-max-phone) {
+  .artpieceSwitcher {
+    margin: 0 (-$spacing-l);
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-phone-mini) {
+  .arrow {
+    width: 40px;
+  }
+  .prev {
+    .arrow {
+      transform: rotate(180deg);
+      left: auto;
+      right: 120px;
+    }
+    .action {
+      left: 90px;
+    }
+  }
+  .next {
+    .arrow {
+      left: 120px;
+    }
+    .action {
+      right: 90px;
+    }
   }
 }

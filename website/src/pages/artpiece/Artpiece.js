@@ -6,7 +6,7 @@ import { useQuery } from '@apollo/client'
 import Loader from 'components/loader'
 import ArtpieceSwitcher from 'components/artpiece-switcher'
 import FullscreenOverlay from 'components/fullscreen-overlay'
-import FullscreenButton from 'components/fullscreen-button'
+// import FullscreenButton from 'components/fullscreen-button'
 
 import { settings, propsSettings } from './settings'
 import styles from './Artpiece.module.scss'
@@ -37,15 +37,15 @@ export default function Artpiece({ category }) {
     <>
       <Loader loaded={!loading} />
       <div className={styles.artpiecePage}>
-        <ArtpieceSwitcher category={category} id={id} />
-        <div className={styles.artpiecePreview}>
-          <ArtpieceComponent {...artpieceProps} />
-        </div>
         <div className={styles.artpieceDetails}>
           <h6>{data[artpieceCategory].name}</h6>
           <p>{data[artpieceCategory].description}</p>
-          <FullscreenButton setFullscreen={setFullscreen} />
         </div>
+        <div className={styles.artpiecePreview}>
+          <ArtpieceComponent {...artpieceProps} />
+        </div>
+        <ArtpieceSwitcher category={category} id={id} />
+        {/* <FullscreenButton setFullscreen={setFullscreen} /> */}
       </div>
       {fullscreen &&
         <FullscreenOverlay setFullscreen={setFullscreen}>

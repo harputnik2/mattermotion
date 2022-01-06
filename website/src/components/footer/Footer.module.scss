@@ -14,8 +14,17 @@
 }
 
 @media screen and (max-width: $breakpoint-max-small) {
+  .footer {
+    padding: $spacing-l;
+  }
   .logo {
     max-width: $spacing-xxxl;
+    margin-bottom: $spacing-xl;
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-phone) {
+  .logo {
     margin-bottom: $spacing-xl;
   }
 }

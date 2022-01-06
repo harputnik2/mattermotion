@@ -11,14 +11,14 @@ export default function Footer() {
   return (
     <div className={styles.footer}>
       <Row forceMobileColumns={true}>
-        <Column>
+        <Column rowLimit={3}>
           <div className={styles.logo}>
             <Link to='/' title='Logo'>
               <img src={logo} alt='Matter Motion' />
             </Link>
           </div>
         </Column>
-        <Column>
+        <Column rowLimit={3}>
           <Nav orientation='vertical' color='white' />
         </Column>
         <Column></Column>
