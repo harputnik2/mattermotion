@@ -109,7 +109,7 @@
   }
 }
 
-@media screen and (max-width: $breakpoint-max-phone-mini) {
+@media screen and (max-width: $breakpoint-max-phone) {
   .arrow {
     width: 40px;
   }
@@ -129,6 +129,11 @@
     }
     .action {
       right: 90px;
+    }
+  }
+  .prev:hover, .next:hover {
+    .arrow {
+      width: 60px;
     }
   }
 }

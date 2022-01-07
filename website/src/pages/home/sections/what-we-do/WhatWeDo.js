@@ -37,7 +37,7 @@ export default function WhatWeDo() {
       <Loader loaded={!loading} />
       <div id='whatwedo' />
       <Section>
-        <Caption content='what we do' />
+        <Caption content='what I do' />
         {data.homepage.what_we_do.category.map((category) => (
           <CategoryCard
             key={category.id}
