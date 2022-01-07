@@ -28,13 +28,13 @@ export default function Contact() {
     <div className={styles.contact}>
       <div className={styles.contactInvitation}>
         <h3 className={styles.contactInvitationHeading}>
-          Let&apos;s work together
+          Have an inquiry?
         </h3>
       </div>
       <Section>
         <Row>
           <Column>
-            <Caption content='contact'/>
+            <Caption content='contact me'/>
             <div className={styles.contactDetails}>
               <p className={styles.contactLabel}>
                 email
@@ -51,7 +51,7 @@ export default function Contact() {
             </div>
           </Column>
           <Column>
-            <Caption content='lets work together' />
+            <Caption content='leave a message' />
             <form
               action='https://formsubmit.co/5f5295a4e46d66df3c22df983d1294b9'
               method='POST'

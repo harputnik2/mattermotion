@@ -27,7 +27,7 @@ export default function Contact() {
   return (
     <>
       <Loader loaded={!loading} />
-      <div id='contact' />
+      <div id='contact me' />
       <Section theme='dark'>
         <Row>
           <Column>
@@ -48,7 +48,7 @@ export default function Contact() {
             </div>
           </Column>
           <Column>
-            <Caption content='lets work together' onDark={true} />
+            <Caption content='leave a message' onDark={true} />
             <form
               action='https://formsubmit.co/5f5295a4e46d66df3c22df983d1294b9'
               method='POST'

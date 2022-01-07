@@ -29,7 +29,7 @@ export default function About() {
       <Section>
         <Row>
           <Column>
-            <Caption content='about us' />
+            <Caption content='about me' />
             <ReactMarkdown>{data.homepage.about.part_1}</ReactMarkdown>
           </Column>
           <Column>

@@ -45,10 +45,10 @@ export default function Hero() {
           <h1 className={styles.heroSlogan}>{data.homepage.hero.slogan}</h1>
           <div className={styles.heroButtons}>
             <Link to='whatwedo' smooth={true} duration='100'>
-              <Button content='see what we do' />
+              <Button content='see what I do' />
             </Link>
             <Link to='contact' smooth={true} duration='160'>
-              <Button content='lets work together' />
+              <Button content='contact me' />
             </Link>
           </div>
         </div>
