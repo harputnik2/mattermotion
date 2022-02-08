@@ -10,6 +10,8 @@
   height: 260px;
   img {
     line-height: 1;
+    min-height: 100%;
+    width: auto;
     transition: all 0.3s;
   }
 }
@@ -98,7 +100,7 @@
 
 @media screen and (min-width: $breakpoint-min-huge) {
   .cardIllustration {
-    height: 340px;
+    height: 320px;
   }
 }
 

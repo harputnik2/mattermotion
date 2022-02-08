@@ -5,6 +5,10 @@
   z-index: 9;
   background-color: $dark-brown;
   padding: $spacing-xxl;
+  &.homeFooter {
+    background-color: black;
+    filter: invert(1);
+  }
 }
 
 .logo {

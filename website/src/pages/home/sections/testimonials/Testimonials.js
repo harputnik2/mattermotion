@@ -34,7 +34,11 @@ export default function Testimonials() {
     <>
       <Loader loaded={!loading} />
       <Section theme='sectionAfterDark'>
-        <Caption content='what others say about me' />
+        <Row>
+          <Column>
+            <Caption content='what others say about me' />
+          </Column>
+        </Row>
         <Row>
           {data.homepage.testimonials.review.map((review) => (
             <Column key={review.id}>

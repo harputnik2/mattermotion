@@ -27,11 +27,11 @@ export default function Contact() {
   return (
     <>
       <Loader loaded={!loading} />
-      <div id='contact me' />
+      <div id='contact' />
       <Section theme='dark'>
         <Row>
           <Column>
-            <Caption content='contact' onDark={true} />
+            <Caption content='contact me' onDark={true} />
             <div className={styles.contactDetails}>
               <p className={styles.contactLabel}>
                 email

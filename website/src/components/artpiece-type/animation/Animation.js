@@ -9,9 +9,10 @@ export default function Animation({ poster, animation }) {
       <video
         className={styles.video}
         muted={true}
-        autoPlay={false}
+        autoPlay={true}
         loop
         poster={poster}
+        preload="auto"
         controls
       >
         <source

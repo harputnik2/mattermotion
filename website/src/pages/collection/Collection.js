@@ -29,7 +29,7 @@ export default function Collection({ category }) {
           {category.replace(/([A-Z])/g, ' $1')}
         </h4>
         <Row padding='small' forceMobileColumns={true}>
-          {data[category].map((artpiece) => (
+          {data[category].slice(0).reverse().map((artpiece) => (
             <Column key={artpiece.id} padding='small' rowLimit={3}>
               <CollectionCard
                 id={artpiece.id}

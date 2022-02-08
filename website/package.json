@@ -2,7 +2,7 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://smialy.bdl.pl/mm",
+  "homepage": "http://mattermotion.com",
   "dependencies": {
     "@apollo/client": "^3.4.13",
     "@testing-library/jest-dom": "^5.11.4",

@@ -3,7 +3,7 @@ import { useQuery, gql } from '@apollo/client'
 
 import Loader from 'components/loader'
 
-import { Caption, Section } from 'components/ui'
+import { Caption, Section, Row, Column } from 'components/ui'
 import CategoryCard from './category-card'
 
 const WHATWEDO = gql`
@@ -37,15 +37,19 @@ export default function WhatWeDo() {
       <Loader loaded={!loading} />
       <div id='whatwedo' />
       <Section>
-        <Caption content='what I do' />
-        {data.homepage.what_we_do.category.map((category) => (
-          <CategoryCard
-            key={category.id}
-            categoryName={category.name}
-            categoryTeaser={category.description}
-            categoryVideo={category.animation.url}
-          />
-        ))}
+        <Row>
+          <Column>
+            <Caption content='what I do' />
+            {data.homepage.what_we_do.category.map((category) => (
+              <CategoryCard
+                key={category.id}
+                categoryName={category.name}
+                categoryTeaser={category.description}
+                categoryVideo={category.animation.url}
+              />
+            ))}
+          </Column>
+        </Row>
       </Section>
     </>
   )

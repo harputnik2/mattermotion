@@ -26,3 +26,16 @@
     display: block;
   }
 }
+
+@media screen and (min-width: $breakpoint-min-huge) {
+  .row {
+    margin: 0 auto;
+    max-width: 1460px;
+    &.smallPadding {
+      margin: 0 auto;
+    }
+    &.mediumPadding {
+      margin: 0 auto;
+    }
+  }
+}

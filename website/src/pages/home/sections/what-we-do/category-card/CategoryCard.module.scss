@@ -176,3 +176,9 @@
     display: none;
   }
 }
+
+@media screen and (min-width: $breakpoint-min-huge) {
+  .graphic {
+    height: 400px;
+  }
+}
