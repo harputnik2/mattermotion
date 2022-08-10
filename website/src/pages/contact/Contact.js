@@ -42,12 +42,6 @@ export default function Contact() {
               <h4>
                 { data.homepage.contact.email }
               </h4>
-              <p className={styles.contactLabel}>
-                phone
-              </p>
-              <h4>
-                { data.homepage.contact.phone }
-              </h4>
             </div>
           </Column>
           <Column>
